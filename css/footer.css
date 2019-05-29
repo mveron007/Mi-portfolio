@@ -1,0 +1,47 @@
+.main-footer-contain{
+  background-color: #f7f7f6;
+  margin: 0;
+  opacity: 0.5;
+  width: 100%;
+
+}
+.main-footer-nav{
+  background-image: url("../images/bck1-footer-0.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 100vw;
+  position: relative;
+}
+.rojo {
+  background-color: red;
+  width: 80px;
+  height: 30px;
+}
+.social-link a img{
+  display: inline-flex;
+  width: 40px;
+}
+.redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  right: 85vw;
+}
+
+.ln a img,
+.fb a img,
+.gh a img{
+  display: inline-flex;
+  position: absolute;
+  margin-top: 4px;
+  right: 85vw;
+
+}
+.ln a img{
+  top:48px;
+}
+.gh a img{
+  top:92px;
+}

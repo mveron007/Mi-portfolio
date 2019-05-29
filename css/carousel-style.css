@@ -1,0 +1,12 @@
+#carouselExampleFade{
+  margin-bottom: 80px;
+}
+.carousel-inner > .item > img {
+  object-fit: scale-down;
+  height: 50vh;
+  width: 100%;
+}
+/* .carousel-item{
+  height: 30vw;
+
+} */

@@ -1,0 +1,77 @@
+body{
+  background-color: rgb(42, 90, 129);
+}
+ul li {
+  list-style: none;
+}
+li a{
+  text-decoration: none;
+}
+.main-nav{
+  background-color: rgba(245, 90, 56, 0.84);
+}
+.main-nav ul{
+  display: inline-flex;
+  flex-direction: row;
+  padding: 0 25%;
+}
+.indice-page{
+  margin: 5px 15px;
+}
+.indice-page span{
+  color: white;
+  text-decoration: none;
+}
+.profile-photo img {
+  width:200px;
+  height:200px;
+  border-radius:250px;
+}
+.profile-photo{
+  display: inline-flex;
+  justify-content: center;
+  box-sizing: content-box;
+  border-radius: 250px;
+  position: relative;
+  left: 75vw;
+
+}
+.professional-pf {
+  display: inline-block;
+
+}
+.professional-pf-skill {
+  text-align:center;
+}
+ i img{
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+
+}
+.icon-abilities ul{
+  display: inline-flex;
+  flex-direction: row;
+  padding: 0 25%;
+}
+.list-icon{
+  width: 125px;
+  height: 100px;
+  margin: 20px 35px;
+
+}
+.list-icon article{
+  border: 1px solid rgb(182, 235, 235);
+  border-radius: 25px;
+  margin-top: 10px;
+  box-shadow: 5px rgb(66, 66, 66);
+  text-align: center;
+}
+.contacto {
+  background-color: black;
+  width: 100vw;
+}
+.contact-control{
+  display: inline-flex;
+  flex-wrap: wrap;
+}
