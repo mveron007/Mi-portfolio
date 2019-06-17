@@ -24,7 +24,7 @@
     <?php require_once "carousel.php" ?>
 
     <div class="profile-photo">
-      <img src="images/foto-cv-2019.jpg" alt="foto-perfil">
+      <img src="images/profile.jpg" alt="foto-perfil">
     </div>
 
     <h1 class="professional-pf" id="professional">Extracto Profesional</h1>
