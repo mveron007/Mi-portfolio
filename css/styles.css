@@ -67,11 +67,3 @@ li a{
   box-shadow: 5px rgb(66, 66, 66);
   text-align: center;
 }
-.contacto {
-  background-color: black;
-  width: 100vw;
-}
-.contact-control{
-  display: inline-flex;
-  flex-wrap: wrap;
-}
