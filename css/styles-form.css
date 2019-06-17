@@ -1,7 +1,15 @@
+
 .contacto {
-  background-color: blue;
+  background-image: url("../images/programacion-bk.jpg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
   width: 100vw;
   padding: 20px;
+}
+.contacto h1,
+.contacto p {
+  color: white;
 }
 .contact-control{
   display: inline-flex;

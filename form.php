@@ -26,7 +26,9 @@
         <div class="contact-control-msg">
           <textarea style="border-radius:10px; width:90%; height:125px;" name="message" id="message" placeholder="Mensaje" > </textarea>
         </div>
-        <button type="submit" name="button">Enviar <span class="ion-paper-airplane"></span> </button>
+
+        <button type="submit" class="btn btn-lg btn-outline-dark" name="button">Enviar <i class="ion-paper-airplane"></i> </button>
+
 
       </form>
 
