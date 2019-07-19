@@ -1,0 +1,26 @@
+header{
+  background-image:url('../images/coder.jpg');
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  opacity: 0.9;
+  width: 100vw;
+  height: 500px;
+  padding: 20px;
+}
+.h1-special h1{
+  position: absolute;
+  transform: translate(32vw, 50%);
+  color: white;
+}
+.h1-special .wellcoming{
+  position: absolute;
+  transform: translate(38vw, 50%);
+  color: white;
+}
+.presentation{
+  margin-top: 20px;
+  margin-left: 20%;
+  margin-right:20%;
+
+}

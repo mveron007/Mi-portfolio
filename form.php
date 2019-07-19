@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
+<!--  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles-form.css">
     <title></title>
-  </head>
+  </head> -->
+<?php require_once 'vendor.php'; ?>
   <body>
 
     <div class="contacto">
@@ -27,7 +28,7 @@
           <textarea style="border-radius:10px; width:90%; height:125px;" name="message" id="message" placeholder="Mensaje" > </textarea>
         </div>
 
-        <button type="submit" class="btn btn-lg btn-outline-dark" name="button">Enviar <i class="ion-paper-airplane"></i> </button>
+        <button type="submit" class="btn btn-lg btn-outline-dark" name="button">Enviar</button>
 
 
       </form>

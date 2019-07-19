@@ -1,5 +1,6 @@
 body{
-  background-color: rgb(42, 90, 129);
+  /* background-color: rgb(42, 90, 129); */
+  background-color: red;
 }
 ul li {
   list-style: none;
@@ -8,7 +9,7 @@ li a{
   text-decoration: none;
 }
 .main-nav{
-  background-color: rgba(245, 90, 56, 0.84);
+  background-color: rgba(0,0,0,.075);
 }
 .main-nav ul{
   display: inline-flex;

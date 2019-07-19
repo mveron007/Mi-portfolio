@@ -8,7 +8,10 @@
     <title>Marcos Verón</title>
   </head>
   <body>
-    <header class="main-header">
+
+    <?php require_once 'header.php'; ?>
+
+    <!-- <header class="main-header">
       <nav class="main-nav">
         <ul>
           <li> <a href="#" class="indice-page"> <i class=""></i> <span>Inicio</span> </a> </li>
@@ -19,9 +22,9 @@
         </ul>
       </nav>
 
-    </header>
+    </header> -->
 
-    <?php require_once "carousel.php" ?>
+    <!-- <?php require_once "carousel.php" ?> -->
 
     <div class="profile-photo">
       <img src="images/profile.jpg" alt="foto-perfil">
