@@ -9,12 +9,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
+    // use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
+
+    // protected $dates = ['deleted_at'];
+
     protected $fillable = [
         'name', 'email', 'password', 'dni',
     ];
@@ -36,8 +40,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function products(){
-
+    public function products()
+    {
       return $this->hasMany(Product::class);
     }
 }

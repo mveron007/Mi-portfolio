@@ -18,15 +18,17 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
+
 @section('content')
 <div class="productContainer">
   <a href="/home"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a>
-  <form class="" action="/products/addProduct" method="post" enctype="multipart/form-data">
+  <form action="/products/{{ $productos->id }}" method="post" enctype="multipart/form-data">
     @csrf
+    @method('PUT')
 
       <div class="form-group">
         <label for="title">Nombre del producto: </label>
-        <input type="text" class="form-control" name="title" value="">
+        <input type="text" class="form-control" name="title" value="{{ $productos->title }}">
       </div>
 
       @if($errors->has('title'))
@@ -37,19 +39,18 @@
 
         <div class="form-group">
           <label for="image">Imagen del producto: </label>
-          <input type="file" class="form-control-file" name="image" value="">
+          <input type="file" class="form-control-file" name="image" value="{{ $productos->image }}">
         </div>
 
 
       <div class="form-group">
         <label for="price">Precio: </label>
-        <input type="text" class="form-control" name="price" value="">
+        <input type="text" class="form-control" name="price" value="{{ $productos->price }}">
       </div>
-
 
       <div class="form-group">
         <label for="category">Categoria: </label>
-        <select class="form-control" name="category" >
+        <select class="form-control" name="category" value="{{ $productos->category }}">
           <option>Cocina</option>
           <option>Oficina</option>
         </select>
@@ -58,9 +59,9 @@
 
       <div class="form-group">
         <label for="description">Descripción: </label>
-        <textarea name="description" class="form-control" rows="8" cols="80"></textarea>
+        <textarea name="description" class="form-control" rows="8" cols="80">{{ $productos->description }} </textarea>
       </div>
-      <input type="submit" name="add" class="btn btn-primary my-1 " style="width: 200px;" value="Agregar">
+      <input type="submit" name="add" class="btn btn-primary my-1 " style="width: 200px;" value="Actualizar">
 
 
   </form>

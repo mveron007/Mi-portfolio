@@ -11,27 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-
-Route::get('/actors', 'ActorsController@index');
-
- Route::get('/movies/detail/{id}', 'MoviesController@show');
-
-
-Route::get('actors/search', 'ActorsController@search');
-
-
-Route::get('movies/index', 'MoviesController@index');
-
-
-
-Route::get('/movies/agregarPelicula', 'MoviesController@create');
-Route::post('/movies/agregarPelicula', 'MoviesController@store');
-
+Route::get('/',  'ProductsController@index');
 
 //
 // Route::get('movies/', 'MoviesController@store');
@@ -46,4 +26,13 @@ Route::post('/products/addProduct', 'ProductsController@store');
 
 Route::get('/products/index', 'ProductsController@index');
 
-// Route::get('/products/show/{id}', 'ProductsController@show');
+Route::get('/products/show', 'ProductsController@show');
+
+Route::delete('/products/show/{id}', 'ProductsController@destroy');
+
+Route::put('/products/{id}', 'ProductsController@update'); // Ruta para actualizar una película
+
+Route::get('/products/edit/{id}', 'ProductsController@edit');
+
+
+Route::get('/products/show', 'ProductsController@search');

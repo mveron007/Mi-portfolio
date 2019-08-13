@@ -25,9 +25,12 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function create()
     {
         //
+
         return view('products.addProduct');
     }
 
@@ -57,13 +60,15 @@ class ProductsController extends Controller
       $product->category=$request->input('category');
       $product->description=$request->input('description');
 
+      $product->delete();
+
       $imagen = $request->file('image');
 
       if ($imagen) {
 			// Armo un nombre único para este archivo
 			$imagenFinal = uniqid("img_") . "." . $imagen->extension();
 			// Subo el archivo en la carpeta elegida
-			$imagen->storePubliclyAs("/storage/posters/", $imagenFinal);
+			$imagen->storePubliclyAs("/public/posters/", $imagenFinal);
 			// Le asigno la imagen a la película que guardamos
 			$product->image = $imagenFinal;
 		}
@@ -80,12 +85,16 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function search() {
+      $productos=Product::all();
+
+      return view('products.show', compact('productos'));
+    }
     public function show($id)
     {
         //
-        // $products=Product::find($id);
-        //
-        // return view('products.show', compact('products'));
+
     }
 
     /**
@@ -97,6 +106,13 @@ class ProductsController extends Controller
     public function edit($id)
     {
         //
+        $productos = Product::find($id);
+        // if (is_null ($productos))
+        // {
+        // return redirect('products/show');
+        // }
+
+        return view('products/edit', compact('productos'));
     }
 
     /**
@@ -109,6 +125,28 @@ class ProductsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $product = Product::findOrFail($id);
+
+        $product->title=$request->input('title');
+        $product->price=$request->input('price');
+        $product->category=$request->input('category');
+        $product->description=$request->input('description');
+
+        $imagen = $request->file('image');
+
+        if ($imagen) {
+  			// Armo un nombre único para este archivo
+  			$imagenFinal = uniqid("img_") . "." . $imagen->extension();
+  			// Subo el archivo en la carpeta elegida
+  			$imagen->storePubliclyAs("/public/posters/", $imagenFinal);
+  			// Le asigno la imagen a la película que guardamos
+  			$product->image = $imagenFinal;
+  		}
+
+        $product->save();
+
+        return redirect('/home');
+
     }
 
     /**
@@ -120,5 +158,17 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+        $productsD = Product::find($id);
+
+        if ($productsD != null) {
+            $productsD->delete();
+            // return redirect()->route('dashboard')->with(['message'=> 'Successfully deleted!!']);
+            return redirect('products/show');
+
+        }
+
+        return redirect('products/show');
+
+        // return view('products.show', compact('productsD'));
     }
 }

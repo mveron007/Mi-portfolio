@@ -1,0 +1,71 @@
+.container-card{
+  position: relative;
+  z-index: 5;
+  top: -80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:0px 50px 0px 50px;
+
+
+
+}
+
+.card-1{
+  background-color: rgb(42, 150, 238);
+  background-image:url('../images/feed-box.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  background-position: bottom;
+  width:300px;
+  height:330px;
+}
+
+.card-2{
+  background-color:rgb(249, 196, 9);
+  background-image:url('../images/paw-bed.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width:500px; height:200px;
+}
+
+.card-3{
+  background-color:rgb(41, 38, 43);
+  background-image:url('../images/box-clothes.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width:400px;
+  height:250px;
+}
+
+.card-4{
+  position: relative;
+  z-index: 5;
+  top: -60px;
+  left: 325px;
+  background-color:rgb(238, 126, 10);
+  background-image:url('../images/collar.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  width:400px;
+  height:250px;
+}
+
+.card-5{
+  position: relative;
+  z-index: 5;
+  top: -60px;
+  right: 130px;
+  background-color:rgb(42, 150, 238);
+  background-image:url('../images/wash-dog.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width:350px;
+  height:200px;
+
+}
+
+.drop-link{
+  display: none;
+}
