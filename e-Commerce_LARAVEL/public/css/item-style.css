@@ -1,7 +1,14 @@
+
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+
 .container-card{
   position: relative;
   z-index: 5;
-  top: -80px;
+  top: -140px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -16,6 +23,7 @@
   background-image:url('../images/feed-box.png');
   background-size: contain;
   background-repeat: no-repeat;
+  /* box-shadow:  -1em 0 0.4em rgba(0,0,0,.125); */
 
   background-position: bottom;
   width:300px;

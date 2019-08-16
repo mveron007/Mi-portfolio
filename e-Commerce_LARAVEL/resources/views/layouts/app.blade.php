@@ -20,14 +20,14 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body style="background-color: rgb(60, 123, 246);">
+<body style="background-image: url('http://www.gemmaj.co.uk/wp-content/uploads/2018/08/Image_1-2-1024x684.jpeg'); background-repeat:no-repeat; background-size: cover;">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md  shadow-sm">
             <div class="container">
                 <div class="navbar-brand">
                     <!-- {{ config('app.name', 'Laravel') }} -->
                     <!-- <strong>e-Commerce</strong> -->
-                    <img src="/images/logo-brufood2.png" alt="" class="rounded-circle" width="160px;">
+                    <img src="/images/logo-brufood2.png" alt="" class="rounded-circle" width="80px;">
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -63,12 +63,25 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <ul class="nav navbar-nav navbar-right">
+                                 @if (Auth::check())
+                                                      @if (Auth::user()->is_admin == true)
+                                 <li><a href="{{url('admin')}}">Panel de Administrador</a></li>
+                                                      @endif
+                                 <li><a href="{{url('user')}}">{{Auth::user()->name}}</a></li>
+                                 <li><a href="{{url('auth/logout')}}">Salir</a></li>
+                                 @else
+                                          <li><a href="{{url('auth/login')}}">Iniciar sesión</a></li>
+                                 @endif
+                                        </ul>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
+
                                     </form>
                                 </div>
                             </li>
+
                         @endguest
                     </ul>
                 </div>
@@ -78,6 +91,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+
     </div>
+
 </body>
 </html>

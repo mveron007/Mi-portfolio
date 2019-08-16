@@ -33,6 +33,12 @@
         <a class="nav-item nav-link" href="/products/show">Buscador</a>
       </div>
     </div>
+    <form class="navbar-form navbar-left" role="search" action="{{url('home/searchredirect')}}">
+     <div class="form-group">
+      <input type="text" class="form-control" name='search' placeholder="Buscar ..." />
+     </div>
+     <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
   </nav>
 
 

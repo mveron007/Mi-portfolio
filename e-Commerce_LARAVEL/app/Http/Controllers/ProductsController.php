@@ -91,11 +91,15 @@ class ProductsController extends Controller
 
       return view('products.show', compact('productos'));
     }
-    public function show($id)
-    {
-        //
 
+    public function detail($id)
+    {
+      // code...
+      $products=Product::find($id);
+
+      return view('products.detail', compact('products'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

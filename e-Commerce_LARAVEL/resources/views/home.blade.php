@@ -4,19 +4,40 @@
 <div class="container">
   <div class="profile-img">
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; background:rgba(118, 126, 85, 0.5);">
       <!-- <img src="..." class="card-img-top" alt="..."> -->
       <img src="images/my-profile.png" width="200px" class="img-thumbnail card-img-top rounded-circle border-danger">
       <div class="card-body">
-        <h3 class="card-title"><strong>Hola {{Auth::user()->name}}</strong> </h3>
+        <h3 class="card-title"><strong>Hola {{Auth::user()}}</strong> </h3>
         <p class="card-text">Bienvenid@, te daremos un par de opciones para mejorar tu estadía aquí.</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li><a href="/products/index" class="list-group-item card-link">Home</a></li>
-        <li><a href="#" class="list-group-item card-link">Compras</a></li>
-        <li><a href="/products/addProduct" class="list-group-item card-link">Agregar Productos</a></li>
+        <!-- <li><a href="/products/index" class="list-group-item card-link">Home</a></li> -->
+        <!-- <li><a href="#" class="list-group-item card-link">Compras</a></li> -->
+
+        @if (Auth::check())
+          @if (Auth::user()->is_admin == true)
+          <li><a href="/products/addProduct" class="list-group-item card-link">Agregar Productos</a></li>
+          @endif
+          @else
+          <li><a href="#" class="list-group-item card-link">Compras</a></li>
+          <li><a href="/products/index" class="list-group-item card-link">Home</a></li>
+          @endelse
+          @endif
 
       </ul>
+
+      <!-- <ul class="nav navbar-nav navbar-right">
+   @if (Auth::check())
+                        @if (Auth::user()->is_admin == true)
+   <li><a href="{{url('admin')}}">Panel de Administrador</a></li>
+                        @endif
+   <li><a href="{{url('user')}}">{{Auth::user()->name}}</a></li>
+   <li><a href="{{url('auth/logout')}}">Salir</a></li>
+   @else
+            <li><a href="{{url('auth/login')}}">Iniciar sesión</a></li>
+   @endif
+          </ul> -->
     </div>
 
   </div>
@@ -60,6 +81,10 @@
                 </div>
               </div> -->
             </div>
+
+            <footer>
+              <img src="https://oregonfarmcenter.com/wp-content/uploads/2017/02/farm-scene-footer-2.png" alt="">
+            </footer>
         <!-- </div>
     </div>
 </div> -->
