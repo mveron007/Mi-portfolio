@@ -18,12 +18,11 @@
         @if (Auth::check())
           @if (Auth::user()->is_admin == true)
           <li><a href="/products/addProduct" class="list-group-item card-link">Agregar Productos</a></li>
-          @endif
           @else
           <li><a href="#" class="list-group-item card-link">Compras</a></li>
           <li><a href="/products/index" class="list-group-item card-link">Home</a></li>
-          @endelse
           @endif
+        @endif
 
       </ul>
 

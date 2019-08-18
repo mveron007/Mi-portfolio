@@ -11,16 +11,9 @@
 |
 */
 
-Route::get('test', function() {
-    //
-    Cart::add('293ad', 'Product 1', 1, 9.99, ['size' => 'large']);
 
-});
 
-Route::get('cart', function() {
-    //
-    return Cart::content();
-});
+Route::get('checkout', 'CartController@checkout');
 
 
 Route::get('total', function() {
@@ -32,6 +25,13 @@ Route::get('subtotal', function() {
     //
     return Cart::subtotal();
 });
+
+
+Route::get('cart', 'CartController@index') ;
+Route::get('cart/add/{add}', 'CartController@addItem') ;
+
+Route::get('cart/remove/{id}', 'CartController@removeItem' );
+
 
 
 
@@ -67,7 +67,7 @@ Route::get('/products/detail/{id}', 'ProductsController@detail');
 
 Route::get('home/searchredirect', function(){
 
-    /* Nuevo: si el argumento search está vacío regresar a la página anterior */
+    // Si el argumento search está vacío regresar a la página anterior 
     if (empty(Input::get('search'))) return redirect()->back();
 
     $search = urlencode(e(Input::get('search')));
@@ -76,21 +76,22 @@ Route::get('home/searchredirect', function(){
 });
 Route::get("home/search/{search}", "HomeController@buscar");
 
-
+//Filtro para usuario administrador
 Route::group(['middleware' => 'admin'], function () {
-    Route::get('/admin/series', 'Admin\SeriesController@index');
-    Route::get('/admin/series/{id}', 'Admin\SeriesController@edit');
+
     Route::get('/products/show', 'ProductsController@show');
 
-    Route::delete('/products/show/{id}', 'Admin\ProductsController@destroy');
+    Route::delete('/products/show/{id}', 'ProductsController@destroy');  //Ruta para eliminar una película
 
-    Route::put('/products/{id}', 'Admin\ProductsController@update');  //Ruta para actualizar una película
+    Route::put('/products/{id}', 'ProductsController@update');  //Ruta para actualizar una película
 
-    Route::get('/products/edit/{id}', 'Admin\ProductsController@edit');
+    Route::get('/products/edit/{id}', 'ProductsController@edit');  //Ruta para editar una película
 
 
-    Route::get('/products/show', 'Admin\ProductsController@search');
+    Route::get('/products/show', 'ProductsController@search');
 });
+
+//Fin de filtro administrador
 
 Route::match(['get', 'post'], 'admin/createAdmin', 'AdminController@createAdmin');
 

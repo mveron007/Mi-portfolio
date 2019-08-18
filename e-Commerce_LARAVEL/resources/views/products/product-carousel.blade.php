@@ -80,7 +80,7 @@
                 <h1 class="card-title">{{$product->title}}</h1>
                 <h5>$ {{$product->price}}</h5>
                 <p class="card-text">{{ $product->description }}</p>
-                 <a href="#" class="btn btn-primary">Go somewhere</a>
+                 <a href="/products/detail/{{$product->id}}" class="btn btn-primary">Ver más</a>
                  <div class="card-footer">
                    <small class="text-muted">{{$product->updated_at}}</small>
                  </div>

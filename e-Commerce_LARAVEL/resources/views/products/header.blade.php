@@ -14,8 +14,8 @@
 
     <div class="main-button-group" style="display:inline-flex; position: absolute; left:80%; top:35%">
       <button type="button" name="button"> <img src="/images/lupa.png" alt=""> </button>
-      <button type="button" name="button"> <img src="/images/usuario.png" alt=""> </button>
-      <button type="button" name="button"> <img src="/images/carro.png" alt=""> </button>
+      <button type="button" name="button"> <a href="/home"><img src="/images/usuario.png" alt=""></a> </button>
+      <button type="button" name="button"> <a href="/cart"><img src="/images/carro.png" alt=""></a> </button>
 
     </div>
   </div>
@@ -28,8 +28,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="/login">Mi cuenta <span class="sr-only">(current)</span></a>
+
+        @if (Auth::check() == false)
         <a class="nav-item nav-link" href="/register">Registrarme</a>
+        <a class="nav-item nav-link" href="/login">Iniciar Sesión</a>
+
+        @else
+        <a class="nav-item nav-link active" href="/login">Mi cuenta <span class="sr-only">(current)</span></a>
+        @endif
         <a class="nav-item nav-link" href="/products/show">Buscador</a>
       </div>
     </div>
