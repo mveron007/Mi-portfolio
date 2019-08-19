@@ -6,9 +6,21 @@ use Illuminate\Http\Request;
 
 
 use App\Product;
+use Countries;
 
 class HomeController extends Controller
 {
+
+  public function countries()
+
+    {
+
+        $countries = Countries::all();
+
+        return view('countries',compact('countries'));
+
+    }
+
     /**
      * Create a new controller instance.
      *

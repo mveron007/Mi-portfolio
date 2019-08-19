@@ -50,13 +50,18 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            //'nickname'=>['required', 'string', 'digits:8'],
+            'nickname'=>['required', 'string', 'min:4', 'max:10','unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'regex:/DH/', 'min:8', 'confirmed'],
+            // 'country' => ['required','string','max:50'],
+            'avatar' => ['required', 'image'],
         ]
-      //,[
-      //    'dni.digits'=>'El :attribute debe contener 8 caracteres'
-      //]
+      ,[
+          'required' => 'El campo :attribute es obligatorio',
+          'nickname.digits'=>'El :attribute debe contener entre 4 y 10 caracteres',
+          'password.confirmed' => 'Las contraseñas deben coincidir',
+          'password.regex' => 'La contraseña debe contener al menos una D y H seguidas'
+      ]
     );
     }
 
@@ -68,10 +73,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+      $request = request();
+      $profileImage = $request->file('avatar');
+      $profileImageName = uniqid('img-') . '.' . $profileImage->extension();
+      $profileImage->storePubliclyAs('public/avatars', $profileImageName);
+
         return User::create([
             'name' => $data['name'],
+            'nickname' => $data['nickname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            // 'country' => $data['country']->nullable(),
+            'avatar' => $profileImageName,
         ]);
     }
 }

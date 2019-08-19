@@ -12,6 +12,18 @@
 */
 
 
+//Prueba con countries API
+
+// Route::get('countries', function() {
+//     //
+//
+//     $pais = Countries::all();
+//     return $pais;
+// });
+
+Route::get('countries', 'HomeController@countries');
+//Fin de prueba con countries API
+
 
 Route::get('checkout', 'CartController@checkout');
 
@@ -67,7 +79,7 @@ Route::get('/products/detail/{id}', 'ProductsController@detail');
 
 Route::get('home/searchredirect', function(){
 
-    // Si el argumento search está vacío regresar a la página anterior 
+    // Si el argumento search está vacío regresar a la página anterior
     if (empty(Input::get('search'))) return redirect()->back();
 
     $search = urlencode(e(Input::get('search')));

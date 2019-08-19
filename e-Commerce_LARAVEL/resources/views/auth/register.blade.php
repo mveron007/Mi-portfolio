@@ -26,9 +26,14 @@
                         </div>
 
                         <div class="form-group row">
-                          <label for="dni" class="col-md-4 col-form-label text-md-right">Nickname</label>
+                          <label for="nickname" class="col-md-4 col-form-label text-md-right">Nickname</label>
                           <div class="col-md-6">
-                            <input type="text" class="form-control" value="">
+                            <input type="text" class="form-control" name="nickname" value="{{ old('nickname') }}">
+                            @if ($errors->has('nickname'))
+                                              <span class="help-block">
+                                                <strong>{{ $errors->first('nickname') }}</strong>
+                                              </span>
+                                            @endif
                           </div>
                         </div>
                         <!-- <div class="form-group row">
@@ -81,11 +86,21 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                          <label for="photo" class="col-md-4 col-form-label text-md-right">Profile photo</label>
+                        <!-- <div class="form-group row">
+                          <label for="country" class="col-md-4 col-form-label text-md-right">Country</label>
 
                           <div class="col-md-6">
-                            <input type="file" class="form-control" name="" value="">
+                            <select class="form-control" name="country">
+                              <option value="">1</option>
+                            </select>
+                          </div>
+                        </div> -->
+
+                        <div class="form-group row">
+                          <label for="avatar" class="col-md-4 col-form-label text-md-right">Profile photo</label>
+
+                          <div class="col-md-6">
+                            <input type="file" class="form-control" name="avatar" value="">
                           </div>
                         </div>
 

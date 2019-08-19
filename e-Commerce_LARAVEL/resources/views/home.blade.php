@@ -5,8 +5,11 @@
   <div class="profile-img">
 
     <div class="card" style="width: 18rem; background:rgba(118, 126, 85, 0.5);">
-      <!-- <img src="..." class="card-img-top" alt="..."> -->
+
       <img src="images/my-profile.png" width="200px" class="img-thumbnail card-img-top rounded-circle border-danger">
+      
+
+
       <div class="card-body">
         <h3 class="card-title"><strong>Hola {{Auth::user()}}</strong> </h3>
         <p class="card-text">Bienvenid@, te daremos un par de opciones para mejorar tu estadía aquí.</p>
