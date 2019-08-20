@@ -87,7 +87,7 @@ class ProductsController extends Controller
      */
 
     public function search() {
-      $productos=Product::all();
+      $productos=Product::paginate(5);
 
       return view('products.show', compact('productos'));
     }

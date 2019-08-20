@@ -1,6 +1,46 @@
 @extends('layouts.app')
 
 @section('content')
+<script type="text/javascript">
+  var theForm = document.queryselector('form');
+  var formInputs = Array.from(theForm.elements);
+
+  formInputs.shift();
+  formInputs.pop();
+
+
+  // Expresión regular para validar solo números
+  var regexNumber = /^\d+$/;
+
+  // Objeto literal para verificar si un campo tiene error
+  var errorsObj = {};
+
+  formInputs.forEach(function(oneInput) {
+  oneInput.addEventListener("blur", function(){
+    if(this.value.trim() == ""){
+      this.classList.add("is-invalid");
+      this.nextElementSibling.innerHTML = 'El campo <b>' + this.getAttribute('data-nombre') + '</b> es obligatorio';
+      errorsObj[this.name] = true;
+    }else {
+			// Cuando el campo NO está vacío
+
+			// Quitamos la clase de error SI existiera
+			this.classList.remove('is-invalid');
+
+			// Si la data es correcta, asignamos esta clase de bootstrap
+			this.classList.add('is-valid');
+
+			// Al mensaje de error le sacamos el texto
+			this.nextElementSibling.innerHTML = '';
+
+			// Si un campo NO tiene error, eliminamos la key del objeto y su valor
+			delete errorsObj[this.name];
+
+  })
+});
+
+</script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

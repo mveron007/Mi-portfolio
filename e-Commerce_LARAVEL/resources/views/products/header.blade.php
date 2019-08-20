@@ -36,8 +36,24 @@
         @else
         <a class="nav-item nav-link active" href="/login">Mi cuenta <span class="sr-only">(current)</span></a>
         @endif
-        <a class="nav-item nav-link" href="/products/show">Buscador</a>
+        <!-- <a class="nav-item nav-link" href="/products/show">Buscador</a> -->
       </div>
+
+      <!-- <div class="btn-group dropright">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropright
+        </button>
+        <div class="dropdown-menu">
+          <button type="button" class="dropdown-item rounded-pill"  id="button1" style="background-color: rgb(196, 35, 199);" >Pink</button>
+          <div class="dropdown-divider"></div>
+          <button type="button" class="dropdown-item rounded-pill"  id="button2" style="background-color: rgb(155, 14, 204);" >Purple</button>
+          <div class="dropdown-divider"></div>
+          <button type="button" class="dropdown-item rounded-pill"  id="button3" style="background-color: rgb(14, 141, 204);" >Light Blue</button>
+          <div class="dropdown-divider"></div>
+          <button type="button" class="dropdown-item rounded-pill"  id="button4" style="background-color: #4bd1b6;" >Light Green</button>
+        </div>
+      </div> -->
+
     </div>
     <form class="navbar-form navbar-left" role="search" action="{{url('home/searchredirect')}}">
      <div class="form-group">

@@ -4,14 +4,18 @@
 <div class="container">
   <div class="profile-img">
 
+    @auth
     <div class="card" style="width: 18rem; background:rgba(118, 126, 85, 0.5);">
 
+      @if(Auth::user()->avatar !== null)
+      <img src="/storage/avatars/{{Auth::user()->avatar}}" width="200px" class="img-thumbnail card-img-top rounded-circle border-danger">
+      @else
       <img src="images/my-profile.png" width="200px" class="img-thumbnail card-img-top rounded-circle border-danger">
-      
+      @endif
 
 
       <div class="card-body">
-        <h3 class="card-title"><strong>Hola {{Auth::user()}}</strong> </h3>
+        <h3 class="card-title"><strong>Hola {{Auth::user()->name}}</strong> </h3>
         <p class="card-text">Bienvenid@, te daremos un par de opciones para mejorar tu estadía aquí.</p>
       </div>
       <ul class="list-group list-group-flush">
@@ -21,6 +25,7 @@
         @if (Auth::check())
           @if (Auth::user()->is_admin == true)
           <li><a href="/products/addProduct" class="list-group-item card-link">Agregar Productos</a></li>
+          <li><a class="list-group-item card-link" href="/products/show">Editor de Productos</a></li>
           @else
           <li><a href="#" class="list-group-item card-link">Compras</a></li>
           <li><a href="/products/index" class="list-group-item card-link">Home</a></li>
@@ -41,6 +46,7 @@
    @endif
           </ul> -->
     </div>
+    @endauth
 
   </div>
     <!-- <div class="row justify-content-center">

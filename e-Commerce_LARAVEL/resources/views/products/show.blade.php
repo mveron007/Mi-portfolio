@@ -20,11 +20,10 @@
     <title></title>
   </head>
   <body>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
     <a href="/"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a>
-      <ul id="myUL">
+
         @foreach ($productos as $producto)
-          <li>
+
               <div class="card products" >
 
                 <div class="edit-link">
@@ -55,9 +54,11 @@
                   <small class="text-muted">categoria</small>
                 </div>
               </div>
-          
-          </li>
+
         @endforeach
+
+        {{ $productos->links() }}
+
         <!-- <li><a href="#">Agnes</a></li>
 
         <li><a href="#">Billy</a></li>
@@ -66,7 +67,7 @@
         <li><a href="#">Calvin</a></li>
         <li><a href="#">Christina</a></li>
         <li><a href="#">Cindy</a></li> -->
-      </ul>
+
   </body>
   <script src="{{ asset('js/search.js') }}" defer></script>
   <!-- <script src="resources/js/search.js"></script> -->
