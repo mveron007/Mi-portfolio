@@ -33,70 +33,75 @@
         <div class="card card-1" style="background-image:url('../images/feed-box.png');
         background-size: contain; background-repeat: no-repeat; background-color: rgb(42, 150, 238); background-position: bottom;
         width:300px; height:330px;">
-          <!-- <img src="/images/pets-feed.png" width="100px" alt=""> -->
-          <h1 > <a  class="nav-link dropdown-toggle menu-item">Higiene</a> </h1>
 
-          <div class="drop-link">
-            <ul>
-              <li> <a href="#"> Link </a> </li>
-              <li> <a href="#"> Link </a> </li>
-              <li> <a href="#"> Link </a> </li>
-
-            </ul>
+        <!-- Prueba -->
+        <div class="dropdown">
+          <button class="dropbtn"> <h3>Alimentos</h3> </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
           </div>
+        </div>
+        <!-- Fin de prueba -->
         </div>
 
         <div class="card card-2" style="background-color:rgb(249, 196, 9); background-image:url('../images/paw-bed.png');
         background-repeat: no-repeat; background-position: bottom;
         width:500px; height:200px;">
-        <h1 > <a  class="nav-link dropdown-toggle menu-item">Higiene</a> </h1>
+        <!-- <h1 > <a  class="nav-link dropdown-toggle menu-item">Higiene</a> </h1> -->
 
-        <div class="drop-link">
-          <ul>
-            <li> <a href="#"> Link </a> </li>
-            <li> <a href="#"> Link </a> </li>
-            <li> <a href="#"> Link </a> </li>
-
-          </ul>
+        <!-- Prueba -->
+        <div class="dropdown">
+          <button class="dropbtn"> <h3>Camas y colchonetas</h3> </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
         </div>
+        <!-- Fin de prueba -->
+
         </div>
 
         <div class="card card-3" style="background-color:rgb(41, 38, 43); width:400px; height:250px; background-image:url('../images/box-clothes.png');
         background-repeat: no-repeat; background-position: bottom;">
-        <h1 > <a href="#" class="menu-item">Higiene</a> </h1>
-        <div class="drop-link">
-          <ul>
-            <li> <a href="#"> Link </a> </li>
-            <li> <a href="#"> Link </a> </li>
-            <li> <a href="#"> Link </a> </li>
-
-          </ul>
+        <!-- Prueba -->
+        <div class="dropdown">
+          <button class="dropbtn"> <h3>Ropa</h3> </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
         </div>
+        <!-- Fin de prueba -->
         </div>
 
         <div class="card card-4">
-          <h1 > <a  class="nav-link dropdown-toggle menu-item">Higiene</a> </h1>
-
-          <div class="drop-link">
-            <ul>
-              <li> <a href="#"> Link </a> </li>
-              <li> <a href="#"> Link </a> </li>
-              <li> <a href="#"> Link </a> </li>
-
-            </ul>
+          <!-- Prueba -->
+          <div class="dropdown">
+            <button class="dropbtn"> <h3>Collares y chapitas</h3> </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
           </div>
+          <!-- Fin de prueba -->
         </div>
 
         <div class="card card-5">
-          <h1 > <a href="#" class="menu-item">Higiene</a> </h1>
-          <div class="drop-link">
-            <ul>
-              <li> <a href="#"> Link </a> </li>
-              <li> <a href="#"> Link </a> </li>
-              <li> <a href="#"> Link </a> </li>
-
-            </ul>
+          <!-- Prueba -->
+          <div class="dropdown">
+            <button class="dropbtn"> <h3>Estética e higiene</h3> </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
           </div>
+          <!-- Fin de prueba -->
         </div>
 
         </section>
@@ -109,9 +114,17 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 
     <br><br><br>
-
-
-
+    <div class="dropup my-bot" style="position:fixed; left: 75%; bottom:0%; z-index:10;">
+      <button class="dropbtn2"> <img src="/images/bocadillo.png" alt=""> <strong>Chateá con nosotros</strong></button>
+      <div class="dropup-content">
+        <iframe
+          allow="microphone;"
+          width="350"
+          height="430"
+          src="https://console.dialogflow.com/api-client/demo/embedded/39ea7749-be32-4e63-aa5d-47c3946792ac">
+      </iframe>
+    </div>
+    </div>
 
 
   </body>

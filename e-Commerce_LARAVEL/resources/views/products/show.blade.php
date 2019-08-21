@@ -22,6 +22,9 @@
   <body>
     <a href="/"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a>
 
+
+    <div class="edit-product-container">
+
         @foreach ($productos as $producto)
 
               <div class="card products" >
@@ -57,19 +60,12 @@
 
         @endforeach
 
-        {{ $productos->links() }}
+      </div>
+      {{ $productos->links() }}
 
-        <!-- <li><a href="#">Agnes</a></li>
-
-        <li><a href="#">Billy</a></li>
-        <li><a href="#">Bob</a></li>
-
-        <li><a href="#">Calvin</a></li>
-        <li><a href="#">Christina</a></li>
-        <li><a href="#">Cindy</a></li> -->
 
   </body>
-  <script src="{{ asset('js/search.js') }}" defer></script>
+
   <!-- <script src="resources/js/search.js"></script> -->
 
 </html>

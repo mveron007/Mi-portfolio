@@ -4,8 +4,19 @@
 
 @if (isset($products->id))
 
-
   <div>
+
+    <!-- <div class="container">
+      <div class="row special-row">
+        <div class="col-10">
+          <img src="/storage/posters/{{ $products->image }}" class="card-img-top" alt="...">
+          <div class="">
+            <h1 class="card-title">{{$products->title}}</h1>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
     <div class="card" style="width: 18rem;">
       <img src="/storage/posters/{{ $products->image }}" class="card-img-top" alt="...">
 

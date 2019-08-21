@@ -55,11 +55,11 @@
       </div> -->
 
     </div>
-    <form class="navbar-form navbar-left" role="search" action="{{url('home/searchredirect')}}">
-     <div class="form-group">
-      <input type="text" class="form-control" name='search' placeholder="Buscar ..." />
-     </div>
-     <button type="submit" class="btn btn-primary">Buscar</button>
+    <form class="form-inline my-2 my-lg-0" role="search" action="{{url('home/searchredirect')}}">
+     <!-- <div class="form-group"> -->
+      <input type="text" class="form-control mr-sm-2" name='search' placeholder="Buscar ..." />
+     <!-- </div> -->
+     <button type="submit" class="btn btn-primary my-2 my-sm-0">Buscar</button>
     </form>
   </nav>
 
