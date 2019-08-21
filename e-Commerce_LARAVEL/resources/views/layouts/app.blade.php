@@ -19,6 +19,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Script -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
 </head>
 <body style="background-image: url('http://www.gemmaj.co.uk/wp-content/uploads/2018/08/Image_1-2-1024x684.jpeg'); background-repeat:no-repeat; background-size: cover;">
     <div id="app">

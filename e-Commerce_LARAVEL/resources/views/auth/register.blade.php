@@ -1,42 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<script type="text/javascript">
-  var theForm = document.queryselector('form');
-  var formInputs = Array.from(theForm.elements);
+<script>
+// Aplicación de API de países en el formulario
 
-  formInputs.shift();
-  formInputs.pop();
+$(document).ready(function(){
+$.getJSON('https://restcountries.eu/rest/v2/all', function(data){
 
+var createoption = "<select id='country' class='form-control '>";
 
-  // Expresión regular para validar solo números
-  var regexNumber = /^\d+$/;
-
-  // Objeto literal para verificar si un campo tiene error
-  var errorsObj = {};
-
-  formInputs.forEach(function(oneInput) {
-  oneInput.addEventListener("blur", function(){
-    if(this.value.trim() == ""){
-      this.classList.add("is-invalid");
-      this.nextElementSibling.innerHTML = 'El campo <b>' + this.getAttribute('data-nombre') + '</b> es obligatorio';
-      errorsObj[this.name] = true;
-    }else {
-			// Cuando el campo NO está vacío
-
-			// Quitamos la clase de error SI existiera
-			this.classList.remove('is-invalid');
-
-			// Si la data es correcta, asignamos esta clase de bootstrap
-			this.classList.add('is-valid');
-
-			// Al mensaje de error le sacamos el texto
-			this.nextElementSibling.innerHTML = '';
-
-			// Si un campo NO tiene error, eliminamos la key del objeto y su valor
-			delete errorsObj[this.name];
-
-  })
+for(d in data){
+createoption += "<option>" + data[d].name + "</option>";
+}
+createoption += "</select>";
+document.getElementById('result').innerHTML = createoption;
+});
 });
 
 </script>
@@ -126,15 +104,15 @@
                             </div>
                         </div>
 
-                        <!-- <div class="form-group row">
-                          <label for="country" class="col-md-4 col-form-label text-md-right">Country</label>
+                        <div class="form-group row">
+                          <label for="country-name" class="col-md-4 col-form-label text-md-right">Country</label>
 
                           <div class="col-md-6">
-                            <select class="form-control" name="country">
-                              <option value="">1</option>
-                            </select>
+
+                            <div id="result"></div>
+
                           </div>
-                        </div> -->
+                        </div>
 
                         <div class="form-group row">
                           <label for="avatar" class="col-md-4 col-form-label text-md-right">Profile photo</label>
