@@ -142,13 +142,13 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <ul class="nav navbar-nav navbar-right">
+
                                  @if (Auth::check())
                                                       @if (Auth::user()->is_admin == true)
-                                 <li><a href="{{url('admin')}}">Panel de Administrador</a></li>
+                                 <a class="dropdown-item" href="{{url('#')}}">Panel de Administrador</a>
                                                       @endif
-                                 <li><a href="{{url('user')}}">{{Auth::user()->name}}</a></li>
-                                 <li><a href="{{url('auth/logout')}}">Salir</a></li>
+                                 <a class="dropdown-item" href="{{url('home')}}">Mi cuenta</a>
+
                                  @else
                                           <li><a href="{{url('auth/login')}}">Iniciar sesión</a></li>
                                  @endif
