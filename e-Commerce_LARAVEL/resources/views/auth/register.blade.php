@@ -48,18 +48,19 @@ genericFetchCall('https://restcountries.eu/rest/v2/all', insertCountries);
 
 // Función para traer las provincias e insertarlas en el selectProvincias
 function insertProvinces (provinces) {
-provinces.provincias.forEach(function (unaProvincia) {
-selectProvincias.innerHTML += `<option value="${unaProvincia.nombre}">${unaProvincia.nombre}</option>`;
+provinces.data.forEach(function (unaProvincia) {
+  console.log(unaProvincia);
+selectProvincias.innerHTML += `<option value="${unaProvincia.state}">${unaProvincia.state}</option>`;
 });
 }
 
 selectPaises.addEventListener('change', function () {
 if (this.value.toLowerCase() === 'argentina') {
 contenedorProvincias.style.display = 'flex';
-genericFetchCall('https://apis.datos.gob.ar/georef/api/provincias', insertProvinces);
+genericFetchCall('https://dev.digitalhouse.com/api/getProvincias', insertProvinces);
 } else {
 // contenedorProvincias.style.display = 'none';
-selectProvincias.innerHTML = `<option value="">Elegí una provincia</option>`;
+selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option>`;
 }
 });
 });
@@ -157,11 +158,11 @@ selectProvincias.innerHTML = `<option value="">Elegí una provincia</option>`;
                           <div class="col-md-6">
 
                             <!-- <div id="result"></div> -->
-                            <select id="country" class='form-control' name="">
+                            <select id="country" class='form-control' name="country">
 
                             </select>
-                            <select id="city" class='form-control'>
-                              <option value="">Elegí una provincia</option>
+                            <select id="city" class='form-control' name="city">
+                              <option value="state">Elegí una provincia</option>
                             </select>
 
                           </div>

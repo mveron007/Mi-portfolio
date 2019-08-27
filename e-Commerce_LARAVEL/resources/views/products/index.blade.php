@@ -2,12 +2,43 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <!-- Scripts -->
     <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-    <script src="{{ asset('js/index.js') }}" defer></script>
-    <script type="text/javascript">
+    <!-- <script src="{{ asset('js/index.js') }}" defer></script> -->
+    <!-- <script>
 
+
+      window.addEventListener('load', function () {
+        var itemSection = document.querySelector('#categoriesV');
+
+        function lessWidth() {
+          if (window.matchMedia("(max-width: 700px)").matches) {
+            itemSection.classList.remove('container-card');
+            itemSection.classList.add('vertical');
+            itemSection.classList.add('slider');
+
+          }else {
+            itemSection.classList.add('container-card');
+            itemSection.classList.remove('vertical');
+            itemSection.classList.remove('slider');
+          }
+        }
+      });
+
+
+    </script> -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).on('ready', function() {
+        $(".vertical-center").slick({
+            dots: true,
+            vertical: true,
+            centerMode: true,
+          });
+      });
     </script>
 
 
@@ -17,7 +48,7 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/header-style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/item-style.css') }}">
 
@@ -27,7 +58,7 @@
 
   <body >
 
-      <section class="container-card ">
+      <section id="categoriesV" class="container-card">
       <!-- <div class="container-card " style="display: flex; flex-wrap: wrap;"> -->
         <!-- <div class="card" style="background-color:rgb(42, 150, 238); width:300px; height:300px;"> -->
         <div class="card card-1" style="background-image:url('../images/feed-box.png');
@@ -105,6 +136,39 @@
         </div>
 
         </section>
+
+        <section class="vertical-center slider">
+          <div>
+            <img src="http://placehold.it/350x100?text=1">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=2">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=3">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=4">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=5">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=6">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=7">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=8">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=9">
+          </div>
+          <div>
+            <img src="http://placehold.it/350x100?text=10">
+          </div>
+        </section>
       <!-- </div> -->
 
       @include('products.product-carousel')
@@ -125,6 +189,8 @@
       </iframe>
     </div>
     </div>
+
+    @include('layouts.footer')
 
 
   </body>

@@ -37,6 +37,18 @@
         <a class="nav-item nav-link active" href="/login">Mi cuenta <span class="sr-only">(current)</span></a>
         @endif
         <!-- <a class="nav-item nav-link" href="/products/show">Buscador</a> -->
+        <div class="dropdown">
+          <li class="nav-item nav-link dropbtn"> Colores </li>
+          <div class="dropdown-content">
+            <button type="button" class="dropdown-item rounded-circle"  id="button1" style="background-color: rgb(196, 35, 199); width:30px; height:30px;" ></button>
+              <div class="dropdown-divider"></div>
+              <button type="button" class="dropdown-item rounded-circle"  id="button2" style="background-color: rgb(155, 14, 204); width:30px; height:30px;" ></button>
+              <div class="dropdown-divider"></div>
+              <button type="button" class="dropdown-item rounded-circle"  id="button3" style="background-color: rgb(14, 141, 204); width:30px; height:30px;" ></button>
+              <!-- <div class="dropdown-divider"></div>
+              <button type="button" class="dropdown-item rounded-circle"  id="button4" style="background-color: #4bd1b6;width:30px; height:30px;" ></button> -->
+          </div>
+        </div>
       </div>
 
       <!-- <div class="btn-group dropright">

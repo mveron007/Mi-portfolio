@@ -8,7 +8,6 @@
 
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
 
 <!-- Fonts -->
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -50,8 +49,12 @@
       <div class="form-group">
         <label for="category">Categoria: </label>
         <select class="form-control" name="category" >
-          <option>Cocina</option>
-          <option>Oficina</option>
+          <option>Alimentos</option>
+          <option>Camas y Colchonetas</option>
+          <option>Ropa</option>
+          <option>Collares y Chapitas</option>
+          <option>Estetica e Higiene</option>
+
         </select>
       </div>
 

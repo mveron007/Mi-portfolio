@@ -9,7 +9,7 @@
     <div class="card" style="width: 18rem; background:rgba(118, 126, 85, 0.5);">
 
       @if(Auth::user()->avatar !== null)
-      <img src="/storage/avatars/{{Auth::user()->avatar}}" width="200px" class="img-thumbnail card-img-top rounded-circle border-danger">
+      <img src="{{ Storage::url(Auth::user()->avatar) }}" width="200px" class="img-thumbnail card-img-top rounded-circle border-danger">
       @else
       <img src="images/my-profile.png" width="200px" class="img-thumbnail card-img-top rounded-circle border-danger">
       @endif

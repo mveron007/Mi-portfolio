@@ -53,7 +53,8 @@ class RegisterController extends Controller
             'nickname'=>['required', 'string', 'min:4', 'max:10','unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'regex:/DH/', 'min:8', 'confirmed'],
-            // 'country' => ['required','string','max:50'],
+            'country' => ['required','string','max:50'],
+            'city' => ['required','string','max:50'],
             'avatar' => ['required', 'image'],
         ]
       ,[
@@ -75,17 +76,17 @@ class RegisterController extends Controller
     {
 
       $request = request();
-      $profileImage = $request->file('avatar');
-      $profileImageName = uniqid('img-') . '.' . $profileImage->extension();
-      $profileImage->storePubliclyAs('public/avatars', $profileImageName);
-
+//      $profileImage = $request->file('avatar');
+//      $profileImageName = uniqid('img-') . '.' . $profileImage->extension();
+      // $profileImage->store('public/avatars', $profileImageName);
         return User::create([
             'name' => $data['name'],
             'nickname' => $data['nickname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            // 'country' => $data['country']->nullable(),
-            'avatar' => $profileImageName,
+            'country' => $data['country'],
+            'city' => $data['city'],
+            'avatar' => $request->file('avatar')->store('public/avatar'),
         ]);
     }
 }

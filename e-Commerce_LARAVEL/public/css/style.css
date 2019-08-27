@@ -13,3 +13,24 @@
 }
 
 /* Fin de vista de editor de productos */
+
+.vertical-center{
+  display: none;
+}
+
+
+@media (max-width: 700px) {
+.container-card{
+  display: none;
+}
+.vertical-center{
+  display: inline-block;
+}
+}
+/* Footer */
+
+footer{
+  background-image: url('https://oregonfarmcenter.com/wp-content/uploads/2017/02/farm-scene-footer-2.png');
+}
+
+/* Fin de footer */
