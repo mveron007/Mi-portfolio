@@ -20,17 +20,36 @@
 
 
 @media (max-width: 700px) {
+
+/* Categorias */
 .container-card{
   display: none;
 }
 .vertical-center{
+  position: relative;
   display: inline-block;
+  left: 50vw;
 }
+/* Fin de categorias */
+
 }
 /* Footer */
 
 footer{
-  background-image: url('https://oregonfarmcenter.com/wp-content/uploads/2017/02/farm-scene-footer-2.png');
+  background-image: url('../images/footer-banner.png');
+  background-size: contain;
+  border-bottom: 200px solid rgb(85, 85, 85,1);
 }
 
+.social-links{
+  top:300px;
+  position: relative;
+}
+.social {
+  margin: 10px;
+}
+.my-map{
+  position: relative;
+  top:175px;
+}
 /* Fin de footer */

@@ -139,35 +139,26 @@
 
         <section class="vertical-center slider">
           <div>
-            <img src="http://placehold.it/350x100?text=1">
+            <div class="rounded-circle" style="background-color:rgb(19, 129, 219); width:100px;">
+              <a href="#"><img class="rounded-circle " src="/images/alimentos-para-mascotas.png" alt=""></a>
+            </div>
           </div>
           <div>
-            <img src="http://placehold.it/350x100?text=2">
+            <div class="rounded-circle" style="background-color:rgb(249, 196, 9); width:100px;">
+              <a href="#"><img class="rounded-circle " src="/images/cama-para-mascotas.png" alt=""></a>
+            </div>
           </div>
           <div>
-            <img src="http://placehold.it/350x100?text=3">
+            <div class="rounded-circle" style="background-color:rgb(41, 38, 43); width:100px;">
+              <a href="#"><img class="rounded-circle " src="/images/perro.png" alt=""></a>
+            </div>
           </div>
           <div>
-            <img src="http://placehold.it/350x100?text=4">
+            <div class="rounded-circle" style="background-color:rgb(19, 129, 219); width:100px;">
+              <a href="#"><img class="rounded-circle " src="/images/secador-de-pelo.png" alt=""></a>
+            </div>
           </div>
-          <div>
-            <img src="http://placehold.it/350x100?text=5">
-          </div>
-          <div>
-            <img src="http://placehold.it/350x100?text=6">
-          </div>
-          <div>
-            <img src="http://placehold.it/350x100?text=7">
-          </div>
-          <div>
-            <img src="http://placehold.it/350x100?text=8">
-          </div>
-          <div>
-            <img src="http://placehold.it/350x100?text=9">
-          </div>
-          <div>
-            <img src="http://placehold.it/350x100?text=10">
-          </div>
+
         </section>
       <!-- </div> -->
 
