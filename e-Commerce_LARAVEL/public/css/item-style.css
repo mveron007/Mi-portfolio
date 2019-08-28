@@ -94,6 +94,9 @@
   .facet_sidebar {
     display: none;
   }
+  .dropup{
+    display: none;
+  }
 }
 
 .container-card{

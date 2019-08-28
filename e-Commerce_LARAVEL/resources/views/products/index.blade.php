@@ -33,11 +33,21 @@
     <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
       $(document).on('ready', function() {
-        $(".vertical-center").slick({
-            dots: true,
-            vertical: true,
-            centerMode: true,
-          });
+        // $(".vertical-center").slick({
+        //     dots: true,
+        //     vertical: true,
+        //     centerMode: true,
+        //
+        //   });
+
+          $(".center").slick({
+          dots: true,
+          infinite: true,
+          centerMode: true,
+          slidesToShow: 1,
+          slidesToScroll: 4,
+          mobileFirst:true
+        });
       });
     </script>
 
@@ -137,9 +147,9 @@
 
         </section>
 
-        <section class="vertical-center slider">
-          <div>
-            <div class="rounded-circle" style="background-color:rgb(19, 129, 219); width:100px;">
+        <section class="center slider my-items">
+          <div >
+            <div class="rounded-circle" style="background-color:rgb(19, 129, 219); width:100px; ">
               <a href="#"><img class="rounded-circle " src="/images/alimentos-para-mascotas.png" alt=""></a>
             </div>
           </div>
@@ -158,8 +168,8 @@
               <a href="#"><img class="rounded-circle " src="/images/secador-de-pelo.png" alt=""></a>
             </div>
           </div>
-
         </section>
+
       <!-- </div> -->
 
       @include('products.product-carousel')

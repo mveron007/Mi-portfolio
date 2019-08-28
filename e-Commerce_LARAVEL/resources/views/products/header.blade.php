@@ -1,4 +1,6 @@
 <head>
+  <script src="{{ asset('js/ex.js') }}" defer></script>
+
   <link rel="stylesheet" href="{{ asset('css/header-style.css') }}">
 </head>
 <header style="background-image:url('../images/pets-banner_2.jpg'); height:500px; background-repeat:no-repeat; background-size:100vw; ">
@@ -20,7 +22,7 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(238, 126, 10);">
+  <nav class="navbar navbar-expand-lg navbar-light main-nav" style="background-color:rgb(238, 126, 10);">
 
     <a class="navbar-brand" href="#">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
