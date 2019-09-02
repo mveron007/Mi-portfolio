@@ -33,12 +33,6 @@
     <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
       $(document).on('ready', function() {
-        // $(".vertical-center").slick({
-        //     dots: true,
-        //     vertical: true,
-        //     centerMode: true,
-        //
-        //   });
 
           $(".center").slick({
           dots: true,
@@ -182,12 +176,7 @@
     <div class="dropup my-bot" style="position:fixed; left: 75%; bottom:0%; z-index:10;">
       <button class="dropbtn2"> <img src="/images/bocadillo.png" alt=""> <strong>Chateá con nosotros</strong></button>
       <div class="dropup-content">
-        <iframe
-          allow="microphone;"
-          width="350"
-          height="430"
-          src="https://console.dialogflow.com/api-client/demo/embedded/39ea7749-be32-4e63-aa5d-47c3946792ac">
-      </iframe>
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/39ea7749-be32-4e63-aa5d-47c3946792ac"></iframe>
     </div>
     </div>
 

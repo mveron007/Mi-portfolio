@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <script>
 // // Aplicación de API de países en el formulario
 //
@@ -16,6 +17,8 @@
 // document.getElementById('result').innerHTML = createoption;
 // });
 // });
+
+
 
 window.addEventListener('load', function () {
 var selectPaises = document.querySelector('#country');
@@ -49,7 +52,6 @@ genericFetchCall('https://restcountries.eu/rest/v2/all', insertCountries);
 // Función para traer las provincias e insertarlas en el selectProvincias
 function insertProvinces (provinces) {
 provinces.data.forEach(function (unaProvincia) {
-  console.log(unaProvincia);
 selectProvincias.innerHTML += `<option value="${unaProvincia.state}">${unaProvincia.state}</option>`;
 });
 }
@@ -65,7 +67,11 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
 });
 });
 
+
+
 </script>
+<script src="{{ asset('js/validacion/register2.js') }}" defer></script>
+
 
 <div class="container">
     <div class="row justify-content-center">
@@ -74,17 +80,22 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                    <form  method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                                <!-- <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus> -->
+                                <input id="name" type="text" class="form-control " name="name" value="{{ old('name') }}" data-nombre='Nombre'>
+                                <div class="invalid-feedback">
+                                		Aquí va el error del Título
+                                </div>
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
+                                    <!-- <span class="invalid-feedback" role="alert"> -->
+                                    <span class="text-danger">
+
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -94,12 +105,18 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                         <div class="form-group row">
                           <label for="nickname" class="col-md-4 col-form-label text-md-right">Nickname</label>
                           <div class="col-md-6">
-                            <input type="text" class="form-control" name="nickname" value="{{ old('nickname') }}">
-                            @if ($errors->has('nickname'))
-                                              <span class="help-block">
-                                                <strong>{{ $errors->first('nickname') }}</strong>
-                                              </span>
-                                            @endif
+                            <!-- <input type="text" class="form-control" name="nickname" value="{{ old('nickname') }}"> -->
+                            <input id="nickname" type="text" class="form-control " name="nickname" value="{{ old('nickname') }}" data-nombre='Nickname'>
+                            <div class="invalid-feedback">
+                                Aquí va el error del Título
+                            </div>
+                            @error('nickname')
+                                <!-- <span class="invalid-feedback" role="alert"> -->
+                                <span class="text-danger">
+
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                           </div>
                         </div>
                         <!-- <div class="form-group row">
@@ -120,10 +137,16 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" data-nombre="E-mail" >
 
+
+                                <div class="invalid-feedback">
+                                    Aquí va el error del Título
+                                </div>
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                                    <!-- <span class="invalid-feedback" role="alert"> -->
+                                    <span class="text-danger">
+
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -134,10 +157,15 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control" name="password" value="{{old('password')}}" data-nombre="Password">
 
+                                <div class="invalid-feedback">
+                                    Aquí va el error del Título
+                                </div>
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <!-- <span class="invalid-feedback" role="alert"> -->
+                                    <span class="text-danger">
+
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -148,7 +176,10 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="{{old('password-confirm')}}" data-nombre="Re-password">
+                                <div class="invalid-feedback">
+                                    Aquí va el error del Título
+                                </div>
                             </div>
                         </div>
 
@@ -172,8 +203,24 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                           <label for="avatar" class="col-md-4 col-form-label text-md-right">Profile photo</label>
 
                           <div class="col-md-6">
-                            <input type="file" class="form-control" name="avatar" value="">
+                            <input id="avatar" type="file" class="form-control" name="avatar"  value="{{ old('avatar') }}" data-nombre="Imagen">
                           </div>
+
+                          <div class="invalid-feedback">
+                						Aquí va el error del poster
+                					</div>
+                					<!-- @if ($errors->has('avatar'))
+                						<span class="text-danger">
+                							{{ $errors->first('avatar') }}
+                						</span>
+                					@endif -->
+                          @error('avatar')
+                              <!-- <span class="invalid-feedback" role="alert"> -->
+                              <span class="text-danger">
+
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
                         </div>
 
                         <div class="form-group row mb-0">

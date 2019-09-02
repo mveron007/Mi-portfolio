@@ -11,6 +11,13 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/ex.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/register2.js') }}" defer></script> -->
+
+    <!-- <script src="{{ asset('js/register.js') }}" defer></script> -->
+
+
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,15 +25,16 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+  
 
     <!-- Script -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
+
 </head>
 <body style="background-image: url('http://www.gemmaj.co.uk/wp-content/uploads/2018/08/Image_1-2-1024x684.jpeg'); background-repeat:no-repeat; background-size: cover;">
     <div id="app">
-        <nav class="navbar navbar-expand-md  shadow-sm" style="background-color:rgb(238, 126, 10);">
+        <nav class="navbar navbar-expand-md  shadow-sm my-second-nav" style="background-color:rgb(238, 126, 10);">
             <div class="container">
               <!-- Logo -->
                 <div class="navbar-brand">

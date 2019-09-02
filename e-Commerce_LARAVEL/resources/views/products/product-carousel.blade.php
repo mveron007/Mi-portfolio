@@ -79,7 +79,7 @@
               <div class="card-body">
                 <h1 class="card-title">{{$product->title}}</h1>
                 <h5>$ {{$product->price}}</h5>
-                <p class="card-text">{{ $product->description }}</p>
+                <!-- <p class="card-text">{{ $product->description }}</p> -->
                  <a href="/products/detail/{{$product->id}}" class="btn btn-primary">Ver más</a>
                  <div class="card-footer">
                    <small class="text-muted">{{$product->updated_at}}</small>
