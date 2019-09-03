@@ -204,18 +204,15 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
 
                           <div class="col-md-6">
                             <input id="avatar" type="file" class="form-control" name="avatar"  value="{{ old('avatar') }}" data-nombre="Imagen">
+                            <div class="invalid-feedback">
+                  						Aquí va el error del poster
+                  					</div>
                           </div>
 
-                          <div class="invalid-feedback">
-                						Aquí va el error del poster
-                					</div>
-                					<!-- @if ($errors->has('avatar'))
-                						<span class="text-danger">
-                							{{ $errors->first('avatar') }}
-                						</span>
-                					@endif -->
+
+
                           @error('avatar')
-                              <!-- <span class="invalid-feedback" role="alert"> -->
+
                               <span class="text-danger">
 
                                   <strong>{{ $message }}</strong>

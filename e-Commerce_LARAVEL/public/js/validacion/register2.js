@@ -10,6 +10,8 @@ formInputs.shift();
 formInputs.pop();
 
 formInputs.splice(5, 1);
+
+
 console.log(formInputs);
 
 // Expresión regular para validar contraseña que tenga un 'DH'
@@ -55,6 +57,9 @@ formInputs.forEach(function (oneInput) {
 				}
 			}
 
+			var pass = document.getElementById("password").value;
+      // var rePass = document.getElementById("password-confirm").value;
+			// console.log(rePass);
 			if (this.name === 'password') {
 				if (!regexPass.test(this.value.trim())) {
 					this.classList.add('is-invalid');
@@ -63,6 +68,16 @@ formInputs.forEach(function (oneInput) {
 					errorsObj[this.name] = true;
 				}
 
+			}
+
+			if (this.name === 'password_confirmation') {
+
+				if (this.value != pass ) {
+					this.classList.add('is-invalid');
+					this.nextElementSibling.innerHTML = 'Las contraseñas deben coincidir';
+					// Si un campo tiene error, creamos una key con el nombre del campo y valor true
+					errorsObj[this.name] = true;
+				}
 			}
 
 
@@ -93,6 +108,7 @@ formInputs.forEach(function (oneInput) {
 			if (extensionIsOk === undefined) {
 				// Si la extensión no es ninguna de la permitida
 				this.classList.add('is-invalid');
+				console.log(this.nextElementSibling);
 				this.nextElementSibling.innerHTML = 'Formato inválido. Los formatos soportados son jpg, jpeg y png';
 				// Si un campo tiene error, creamos una key con el nombre del campo y valor true
 				errorsObj[this.name] = true;
