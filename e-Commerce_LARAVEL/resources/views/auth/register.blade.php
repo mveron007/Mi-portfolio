@@ -62,9 +62,17 @@ contenedorProvincias.style.display = 'flex';
 genericFetchCall('https://dev.digitalhouse.com/api/getProvincias', insertProvinces);
 } else {
 // contenedorProvincias.style.display = 'none';
-selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option>`;
+selectProvincias.innerHTML = `<option value="">Elegí una provincia</option>`;
 }
 });
+
+// insertProvinces.addEventListener('change', function(){
+//   if (this.value == ' ') {
+//
+//   }
+//
+// })
+
 });
 
 
@@ -192,8 +200,8 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                             <select id="country" class='form-control' name="country">
 
                             </select>
-                            <select id="city" class='form-control' name="city">
-                              <option value="state">Elegí una provincia</option>
+                            <select id="city" class='form-control' name="city" data-nombre="Provincia" >
+                              <option value="">Elegí una provincia</option>
                             </select>
 
                           </div>
@@ -207,17 +215,15 @@ selectProvincias.innerHTML = `<option value="state">Elegí una provincia</option
                             <div class="invalid-feedback">
                   						Aquí va el error del poster
                   					</div>
+                            @error('avatar')
+
+                                <span class="text-danger">
+
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                           </div>
 
-
-
-                          @error('avatar')
-
-                              <span class="text-danger">
-
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
                         </div>
 
                         <div class="form-group row mb-0">

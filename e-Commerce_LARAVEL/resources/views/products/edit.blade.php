@@ -8,7 +8,6 @@
 
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
 
 <!-- Fonts -->
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -16,12 +15,17 @@
 
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link href="{{ asset('css/add-style.css') }}" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> -->
 
 
 @section('content')
-<div class="productContainer">
-  <a href="/home"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a>
+<div class="mx-auto productContainer" >
+  <div class="">
+    <h4 class="text-center">Corrijamos algunas cosas</h4>
+    <hr>
+  </div>
   <form action="/products/{{ $productos->id }}" method="post" enctype="multipart/form-data">
     @csrf
     @method('PUT')
@@ -61,8 +65,10 @@
         <label for="description">Descripción: </label>
         <textarea name="description" class="form-control" rows="8" cols="80">{{ $productos->description }} </textarea>
       </div>
-      <input type="submit" name="add" class="btn btn-primary my-1 " style="width: 200px;" value="Actualizar">
 
+      <div class="text-center">
+        <input type="submit" name="add" class="btn btn-primary my-1 " style="width: 200px;" value="Actualizar">
+      </div>  
 
   </form>
 </div>

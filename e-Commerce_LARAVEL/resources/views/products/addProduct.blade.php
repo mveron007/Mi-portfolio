@@ -15,11 +15,16 @@
 
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link href="{{ asset('css/add-style.css') }}" rel="stylesheet">
 
 @section('content')
-<div class="productContainer">
-  <a href="/home"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a>
+<div class="mx-auto productContainer" >
+  <!-- <a href="/home"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a> -->
+  <div class="">
+    <h4 class="text-center">¡Publicá un nuevo producto!</h4>
+    <hr>
+  </div>
+
   <form class="" action="/products/addProduct" method="post" enctype="multipart/form-data">
     @csrf
 
@@ -63,7 +68,10 @@
         <label for="description">Descripción: </label>
         <textarea name="description" class="form-control" rows="8" cols="80"></textarea>
       </div>
-      <input type="submit" name="add" class="btn btn-primary my-1 " style="width: 200px;" value="Agregar">
+      <div class="text-center">
+        <input type="submit" name="add" class="btn btn-primary my-1" style="width: 200px;" value="Agregar">
+
+      </div>
 
 
   </form>

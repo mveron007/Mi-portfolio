@@ -40,6 +40,7 @@
 /* Footer */
 footer{
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 /* Fin de Footer */
 
@@ -49,6 +50,7 @@ footer{
 footer{
   background-image: url('../images/footer-banner.png');
   background-size: contain;
+  /* background-repeat: no-repeat; */
   border-bottom: 200px solid rgb(85, 85, 85,1);
 }
 

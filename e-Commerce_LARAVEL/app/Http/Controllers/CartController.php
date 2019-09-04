@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Cart;
 use App\Product;
 use App\Order;
@@ -18,14 +19,19 @@ class CartController extends Controller
     }
     public function addItem($id)
     {
+      $cart = Cart::content();
       $pro = Product::find($id);
       Cart::add(['id' => $pro->id, 'name' => $pro->title, 'qty' => 1, 'price' => $pro->price, 'options' => [
         'img'=> $pro->image,
         ]
       ]);
 
-      echo "add to a cart";
+
+      return view('cart.add', compact('pro'));
+
+
     }
+
 
     public function checkout()
     {

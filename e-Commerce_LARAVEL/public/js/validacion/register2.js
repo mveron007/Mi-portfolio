@@ -16,6 +16,7 @@ console.log(formInputs);
 
 // Expresión regular para validar contraseña que tenga un 'DH'
 var regexPass = /DH/;
+var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 // Objeto literalpara verificar si un campo tiene error
 var errorsObj = {};
@@ -52,6 +53,15 @@ formInputs.forEach(function (oneInput) {
 				if (this.value.length > 15) {
 					this.classList.add('is-invalid');
 					this.nextElementSibling.innerHTML = 'El Nombre debe ser inferior a 15 letras';
+					// Si un campo tiene error, creamos una key con el nombre del campo y valor true
+					errorsObj[this.name] = true;
+				}
+			}
+
+			if (this.name === 'email') {
+				if (!regexEmail.test(this.value.trim())) {
+					this.classList.add('is-invalid');
+					this.nextElementSibling.innerHTML = 'Incluye un <b>' + '@<b>' + ' en el campo';
 					// Si un campo tiene error, creamos una key con el nombre del campo y valor true
 					errorsObj[this.name] = true;
 				}

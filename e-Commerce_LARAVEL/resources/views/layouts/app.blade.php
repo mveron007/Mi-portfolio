@@ -25,7 +25,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+
 
     <!-- Script -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -45,81 +47,80 @@
                 </div>
                 <!-- Fin de logo -->
 
-                @auth
-                <ul class="nav ">
 
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Alimentos</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Camas y colchonetas</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ropa</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Identificación</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estética e higiene</a>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                  </li>
-
-                </ul>
-
-
-                @endauth
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"> <img src="/images/menu.png" alt="">  </span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
 
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
+                      @auth
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Alimentos</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Camas y colchonetas</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ropa</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Identificación</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Estética e higiene</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </li>
+
+                      
+
+
+                      @endauth
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -156,6 +157,7 @@
                                  <a class="dropdown-item" href="{{url('#')}}">Panel de Administrador</a>
                                                       @endif
                                  <a class="dropdown-item" href="{{url('home')}}">Mi cuenta</a>
+                                 <a class="dropdown-item" href="{{url('cart')}}">Mis compras</a>
 
                                  @else
                                           <li><a href="{{url('auth/login')}}">Iniciar sesión</a></li>
@@ -179,7 +181,24 @@
             @yield('content')
         </main>
 
+        <footer >
+          <nav>
+            <ul class="nav flex-column location">
+              <li class="nav-item"> <a href="#"> <img src="/images/descubrir.png" alt=""> Florencio Varela, Buenos Aires</a> </li>
+              <li class="nav-item"> <a href="#"> <img src="/images/llamada-telefonica.png" alt=""> 4123-6788</a> </li>
+              <li class="nav-item"> <a href="#"> <img src="/images/email.png" alt=""> brufood@gmail.com</a> </li>
+
+            </ul>
+            <ul class="nav justify-content-center social-links">
+              <li> <a  class="nav-item social" href="https://www.facebook.com/Brufood-110286890328592/?"> <img src="/images/facebook.png" alt=""> </a> </li>
+              <li> <a  class="nav-item social" href="https://web.telegram.org/#/login"> <img src="/images/telegram.png" alt=""> </a> </li>
+
+            </ul>
+        </footer>
+
     </div>
+
+
 
 </body>
 </html>

@@ -28,7 +28,7 @@
           <li><a href="/products/addProduct" class="list-group-item card-link">Agregar Productos</a></li>
           <li><a class="list-group-item card-link" href="/products/show">Editor de Productos</a></li>
           @else
-          <li><a href="#" class="list-group-item card-link">Compras</a></li>
+          <li><a href="/cart" class="list-group-item card-link">Compras</a></li>
           <li><a href="/products/index" class="list-group-item card-link">Home</a></li>
           @endif
         @endif
@@ -91,9 +91,7 @@
               </div> -->
             </div>
 
-            <footer>
-              <img src="https://oregonfarmcenter.com/wp-content/uploads/2017/02/farm-scene-footer-2.png" alt="">
-            </footer>
+            
         <!-- </div>
     </div>
 </div> -->

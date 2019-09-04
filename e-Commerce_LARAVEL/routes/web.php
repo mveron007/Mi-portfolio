@@ -40,7 +40,8 @@ Route::get('subtotal', function() {
 
 
 Route::get('cart', 'CartController@index') ;
-Route::get('cart/add/{add}', 'CartController@addItem') ;
+Route::get('cart/add/{id}', 'CartController@addItem') ;
+Route::post('/cart', 'CartController@cart');
 
 Route::get('cart/remove/{id}', 'CartController@removeItem' );
 
@@ -86,7 +87,7 @@ Route::get('home/searchredirect', function(){
     $route = "home/search/$search";
     return redirect($route);
 });
-Route::get("home/search/{search}", "HomeController@buscar");
+Route::get("home/search/{search}", "ProductsController@buscar");
 
 //Filtro para usuario administrador
 Route::group(['middleware' => 'admin'], function () {

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-      <meta charset="utf-8">
-      <title></title>
-      <!-- Scripts -->
-      <script src="{{ asset('js/app.js') }}" defer></script>
+@extends('layouts.app')
+
+
+@section('pageTitle', 'Agregar Producto')
+
+@section('mainContent')
+
 
       <!-- Fonts -->
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -17,9 +17,8 @@
       <link rel="stylesheet" href="{{ asset('css/header-style.css') }}">
       <link rel="stylesheet" href="{{ asset('css/edit-style.css') }}">
 
-    <title></title>
-  </head>
-  <body>
+      @section('content')
+
     <a href="/"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a>
 
 
@@ -62,10 +61,4 @@
 
       </div>
       {{ $productos->links() }}
-
-
-  </body>
-
-  <!-- <script src="resources/js/search.js"></script> -->
-
-</html>
+@endsection

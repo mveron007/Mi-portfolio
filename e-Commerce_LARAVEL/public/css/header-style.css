@@ -5,3 +5,30 @@ article{
 header{
   background-image: url('../images/dogue.jpg');
 }
+.phone-p{
+  display:inline-flex;
+  position: absolute;
+  left:45%;
+  top:35%;
+}
+.main-button-group{
+  display:inline-flex;
+  position: absolute;
+  left:80%;
+  top:35%;
+}
+.button-child{
+  margin: 0px 2px 0px 2px;
+}
+@media (max-width: 800px) {
+.phone-p{
+  display: none;
+}
+.main-button-group{
+  left: 60%;
+}
+
+.button-child img{
+  width: 32px;
+}
+}

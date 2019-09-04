@@ -11,13 +11,13 @@
 @if (isset($products))
 
   @foreach ($products as $product)
-  <table class="table table-dark">
-    <thead>
+  <table class="table table-bordered">
+    <thead class="thead-light">
       <tr>
-        <th scope="col"><img src="/storage/posters/{{ $product->image }}" style="width:150px;" class="card-img-top rounded-circle" alt="..."></th>
+        <th scope="col"><img src="/storage/posters/{{ $product->image }}" style="width:60px;" class="card-img-top" alt="..."></th>
         <th scope="col">{{$product->title}}</th>
-        <th scope="col">{{$product->price}}</th>
-        <th scope="col"> <a href="/products/detail/{{ $product->id }}" type="button" > Ver </a> </th>
+        <th scope="col">$ {{$product->price}}</th>
+        <th scope="col" class="text-center"> <a href="/products/detail/{{ $product->id }}" class="btn btn-success" type="button" > Ver </a> </th>
       </tr>
     </thead>
   </table>
