@@ -14,7 +14,7 @@
 
 /* Fin de vista de editor de productos */
 
-.center{
+.lazy{
   display: none;
 }
 
@@ -25,17 +25,20 @@
 .container-card{
   display: none;
 }
-.center{
-  position: relative;
+.lazy{
+  /* position: relative; */
   display: inline-block;
 }
 .my-items{
   padding: 0px 21px;
-  margin: 0 12vw;
+  margin: 0 5vw;
 }
 
 /* Fin de categorias */
 
+/* Cart-Styles */
+
+/* Fin de Cart-Styles */
 
 /* Footer */
 footer{

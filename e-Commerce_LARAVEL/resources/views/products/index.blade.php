@@ -34,14 +34,19 @@
     <script type="text/javascript">
       $(document).on('ready', function() {
 
-          $(".center").slick({
-          dots: true,
-          infinite: true,
-          centerMode: true,
-          slidesToShow: 1,
-          slidesToScroll: 4,
-          mobileFirst:true
-        });
+        //   $(".center").slick({
+        //   dots: true,
+        //   infinite: true,
+        //   centerMode: true,
+        //   slidesToShow: 1,
+        //   slidesToScroll: 4,
+        //   mobileFirst:true
+        // });
+        $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        infinite: true,
+        variableWidth: true
+      });
       });
     </script>
 
@@ -141,13 +146,108 @@
 
         </section>
 
-        <section class="center slider my-items">
-          <div >
+        <section class="lazy slider my-items" data-sizes="50vw">
+          <!-- <div >
             <div class="rounded-circle" style="background-color:rgb(19, 129, 219); width:100px; ">
               <a href="#"><img class="rounded-circle " src="/images/alimentos-para-mascotas.png" alt=""></a>
             </div>
-          </div>
+          </div> -->
           <div>
+
+          <div class="card card-1" style="background-image:url('../images/feed-box.png');
+          background-size: contain; background-repeat: no-repeat; background-color: rgb(42, 150, 238); background-position: bottom;
+          width:300px; height:330px;">
+
+          <!-- Prueba -->
+          <div class="dropdown">
+            <button class="dropbtn"> <h3>Alimentos</h3> </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <!-- Fin de prueba -->
+          </div>
+      </div>
+
+        <div>
+
+          <div class="card card-1" style="background-image:url('../images/paw-bed.png');
+          background-size: contain; background-repeat: no-repeat; background-color: rgb(249, 196, 9); background-position: bottom;
+          width:300px; height:330px;">
+
+          <!-- Prueba -->
+          <div class="dropdown">
+            <button class="dropbtn"> <h3>Camas</h3> </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <!-- Fin de prueba -->
+          </div>
+        </div>
+
+        <div>
+
+         <div class="card card-1" style="background-image:url('../images/box-clothes.png');
+          background-size: contain; background-repeat: no-repeat; background-color: rgb(41, 38, 43); background-position: bottom;
+          width:300px; height:330px;">
+
+          <!-- Prueba -->
+          <div class="dropdown">
+            <button class="dropbtn"> <h3>Ropa</h3> </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <!-- Fin de prueba -->
+          </div>
+        </div>
+
+
+        <div>
+
+         <div class="card card-1" style="background-image:url('../images/collar.png');
+          background-size: contain; background-repeat: no-repeat; background-color: rgb(238, 126, 10); background-position: bottom;
+          width:300px; height:330px;">
+
+          <!-- Prueba -->
+          <div class="dropdown">
+            <button class="dropbtn"> <h3>Collares</h3> </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <!-- Fin de prueba -->
+          </div>
+        </div>
+
+        <div>
+
+         <div class="card card-1" style="background-image:url('../images/wash-dog.png');
+          background-size: contain; background-repeat: no-repeat; background-color: rgb(42, 150, 238); background-position: bottom;
+          width:300px; height:330px;">
+          <!-- Prueba -->
+          <div class="dropdown">
+            <button class="dropbtn"> <h3>Higiene</h3> </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <!-- Fin de prueba -->
+          </div>
+        </div>
+
+          <!-- <div>
             <div class="rounded-circle" style="background-color:rgb(249, 196, 9); width:100px;">
               <a href="#"><img class="rounded-circle " src="/images/cama-para-mascotas.png" alt=""></a>
             </div>
@@ -161,7 +261,7 @@
             <div class="rounded-circle" style="background-color:rgb(19, 129, 219); width:100px;">
               <a href="#"><img class="rounded-circle " src="/images/secador-de-pelo.png" alt=""></a>
             </div>
-          </div>
+          </div> -->
         </section>
 
       <!-- </div> -->

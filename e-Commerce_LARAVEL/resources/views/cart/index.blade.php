@@ -2,12 +2,12 @@
 
 @section('content')
 
-  <button type="button" class="btn bnt-info"> <a href="/">Página de inicio</a> </button>
+  <!-- <button type="button" class="btn bnt-info"> <a href="/">Página de inicio</a> </button> -->
   @if(Cart::count() !== 0)
   <div class="container">
     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <div class="row justify-content-start">
-      <div class="col-8 ">
+      <div class="col-8">
   <table class="table table-sm table-dark">
   <thead>
     <tr>
@@ -22,10 +22,10 @@
       <tbody>
         <tr>
           <th scope="row">{{$cartW->qty}}</th>
-          <td><img src="/storage/posters/{{$cartW->options->img}}" width="100px;" alt=""></td>
+          <td><img src="/storage/posters/{{$cartW->options->img}}" width="60px;" alt=""></td>
           <td>{{$cartW->name}}</td>
           <td>${{$cartW->price}}</td>
-          <td> <button type="button" class="btn btn-danger"> <a href="{{url('cart/remove')}}/{{$cartW->rowId}}">Delete</a> </button> </td>
+          <td> <button type="button" class="btn btn-danger"> <a href="{{url('cart/remove')}}/{{$cartW->rowId}}"> <img src="/images/trash-can.png" alt=""> </a> </button> </td>
 
         </tr>
       </tbody>
@@ -40,7 +40,7 @@
       <h1>Tu carrito está vacio</h1>
     </div>
   @endif
-  <div class="col-4">
+  <div class="col col-lg-4 col-sm-10">
     <div class="card">
     <div class="card-body">
       <h5 class="card-title">Resumen</h5>

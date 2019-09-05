@@ -27,6 +27,11 @@
       .title-product h1{
         font-family: 'Acme', sans-serif;
       }
+      @media (max-width:500px) {
+          .title-product{
+              left: 24%;
+          }
+      }
 
       .slider {
           width: 90%;
