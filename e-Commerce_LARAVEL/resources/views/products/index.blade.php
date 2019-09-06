@@ -50,6 +50,18 @@
       });
     </script>
 
+    <script>
+        function chatButton() {
+            var chat = document.getElementById("chatOne");
+            if (chat.style.display === "none") {
+              chat.style.display = "block";
+            } else {
+              chat.style.display = "none";
+            }
+        }
+
+    </script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -273,10 +285,19 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 
     <br><br><br>
+    <!-- <div class="dropup my-bot" style="position:fixed; left: 75%; bottom:0%; z-index:10;"> -->
     <div class="dropup my-bot" style="position:fixed; left: 75%; bottom:0%; z-index:10;">
-      <button class="dropbtn2"> <img src="/images/bocadillo.png" alt=""> <strong>Chateá con nosotros</strong></button>
+
+      <button class="dropbtn2"> <img src="/images/bocadillo.png" alt=""> <strong class="chat-phrase">Chateá con nosotros</strong></button>
       <div class="dropup-content">
         <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/39ea7749-be32-4e63-aa5d-47c3946792ac"></iframe>
+    </div>
+    </div>
+    <div class="dropup-button-mobile" >
+
+      <button onclick="chatButton()" class="dropbtn2 rounded-circle"> <img src="/images/bocadillo.png" alt=""></button>
+      <div id="chatOne" class="dropup-content2">
+        <iframe width="250" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/39ea7749-be32-4e63-aa5d-47c3946792ac"></iframe>
     </div>
     </div>
 

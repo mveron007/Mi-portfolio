@@ -57,6 +57,10 @@
   display: inline-block;
 }
 
+.dropup-button-mobile{
+    display: none;
+}
+
 /* Dropup content (Hidden by Default) */
 .dropup-content {
   display: none;
@@ -97,6 +101,19 @@
   .dropup{
     display: none;
   }
+  .dropup-content2 {
+    display: none;
+    position: absolute;
+    top:239%;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropup-button-mobile{
+      display: block;
+  }
+
 }
 
 .container-card{

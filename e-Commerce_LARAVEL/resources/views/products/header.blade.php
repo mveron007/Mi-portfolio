@@ -96,6 +96,8 @@
     </form>
   </nav>
 
+  <!-- <img src="/images/pets-banner_2.png" alt=""> -->
+
 
 
 </header>
