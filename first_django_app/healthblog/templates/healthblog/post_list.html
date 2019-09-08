@@ -1,0 +1,14 @@
+{% extends 'healthblog/base.html' %}
+{% block content %}
+        <div class="card" style="width: 18rem; margin:5px;">
+          <img src="https://www.diabetes.org/sites/default/files/styles/crop_large/public/2019-06/Healthy%20Food%20Made%20Easy%20-min.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+             <ul>
+                 {% for post in posts %}
+                 <li><strong> <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a> </strong></li>
+                 {% endfor %}
+             </ul>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+{% endblock %}
