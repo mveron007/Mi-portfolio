@@ -59,7 +59,7 @@ class AdminController extends Controller
     $user->is_admin = true;
 
     if ($user->save()){
-     return redirect()->back()->with('message', 'Enhorabuena nuevo administrador creado correctamente');
+     return redirect()->back()->with('message', 'Has creado correctamente un nuevo administrador');
     } else{
      return redirect()->back()->with('error', 'Ha ocurrido un error al guardar los datos');
     }

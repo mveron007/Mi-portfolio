@@ -16,11 +16,11 @@
 
   <link rel="stylesheet" href="{{ asset('css/header-style.css') }}">
 </head>
-<header style="background-image:url('../images/pets-banner_2.jpg'); height:500px; background-repeat:no-repeat; background-size:100vw; ">
+<header style="background-image:url('../images/pets-banner_2.jpg');  ">
 
   <div class="pre-nav" style="position: relative; height:30%; width:100vw; background-color:white;">
-    <div class="rounded-circle" style="display:inline-flex;" >
-      <img style="width:120px; margin:20px;" src="/images/logo-brufood2.png" alt="">
+    <div class="rounded-circle logo" style="display:inline-flex;" >
+      <img src="/images/logo-brufood2.png" alt="">
     </div>
     <div class="phone-p" >
       <img src="/images/telefono.png" alt="">

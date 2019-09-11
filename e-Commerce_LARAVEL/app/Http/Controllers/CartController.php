@@ -35,9 +35,12 @@ class CartController extends Controller
 
     public function checkout()
     {
-      // code...
-      return Order::createOrder();
-      return back();
+        $data = Cart::content();
+        return view('cart.checkout', compact('data') );
+
+        return Order::createOrder();
+
+        return back();
     }
 
     public function removeItem($id)

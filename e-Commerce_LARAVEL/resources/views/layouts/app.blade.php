@@ -36,7 +36,7 @@
 </head>
 <body style="background-image: url('http://www.gemmaj.co.uk/wp-content/uploads/2018/08/Image_1-2-1024x684.jpeg'); background-repeat:no-repeat; background-size: cover;">
     <div id="app">
-        <nav class="navbar navbar-expand-md  shadow-sm my-second-nav" style="background-color:rgb(238, 126, 10);">
+        <nav class="navbar navbar-expand-md  shadow-sm main-nav" style="background-color:rgb(238, 126, 10);">
             <div class="container">
               <!-- Logo -->
                 <div class="navbar-brand">

@@ -1,3 +1,5 @@
+
+
 /* Dropdown Button */
 .dropbtn {
   background-color: rgba(255, 255, 255, 0);
@@ -39,8 +41,6 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: rgba(#182419, 0.91);}
-
-
 
 /* Dropup Button */
 .dropbtn2 {
@@ -93,7 +93,7 @@
   background-color: #2980B9;
 }
 
-/* Visualización para celular */
+/* Query for phones */
 @media (max-width: 600px) {
   .facet_sidebar {
     display: none;
@@ -101,6 +101,9 @@
   .dropup{
     display: none;
   }
+  /* .dropbtn2{
+      display: none;
+  } */
   .dropup-content2 {
     display: none;
     position: absolute;
@@ -115,11 +118,12 @@
   }
 
 }
+/* Final of Query for phones  */
 
 .container-card{
   position: relative;
   z-index: 5;
-  top: -140px;
+  top: -42px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

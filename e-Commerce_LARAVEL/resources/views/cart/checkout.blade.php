@@ -3,8 +3,10 @@
 @section('content')
 
   <!-- <button type="button" class="btn bnt-info"> <a href="/">Página de inicio</a> </button> -->
-  @if(Cart::count() !== 0)
+
   <div class="container">
+      <h1 style="color:rgb(204, 55, 35);">Tu compra ha sido exitosa!</h1>
+
     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
     <div class="row justify-content-start">
       <div class="col-8">
@@ -18,14 +20,13 @@
     </tr>
   </thead>
 
-      @foreach ($cart as $cartW )
+      @foreach ($data as $dataW )
       <tbody>
         <tr>
-          <th scope="row">{{$cartW->qty}}</th>
-          <td><img src="/storage/posters/{{$cartW->options->img}}" width="60px;" alt=""></td>
-          <td>{{$cartW->name}}</td>
-          <td>${{$cartW->price}}</td>
-          <td> <button type="button" class="btn btn-danger"> <a href="{{url('cart/remove')}}/{{$cartW->rowId}}"> <img src="/images/trash-can.png" alt=""> </a> </button> </td>
+          <th scope="row">{{$dataW->qty}}</th>
+          <td><img src="/storage/posters/{{$dataW->options->img}}" width="60px;" alt=""></td>
+          <td>{{$dataW->name}}</td>
+          <td>${{$dataW->price}}</td>
 
         </tr>
       </tbody>
@@ -35,11 +36,7 @@
     </table>
   </div>
 
-  @else
-    <div class="col-8">
-      <h1>Tu carrito está vacio</h1>
-    </div>
-  @endif
+  <!--  -->
   <div class="col col-lg-4 col-sm-10">
     <div class="card">
     <div class="card-body">
@@ -48,12 +45,7 @@
       <h6><strong>Impuestos(%)</strong>     ${{Cart::tax()}}</h6>
       <h3><strong>Total      ${{Cart::total()}}</strong></h3>
       <br><br><br>
-      <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-      @if (Cart::count() !== 0)
-      <a href="{{url('checkout')}}" class="btn btn-warning">Comprar</a>
-      @else
-      <a href="#" class="btn btn-warning">Comprar</a>
-      @endif
+
     </div>
   </div>
 </div>

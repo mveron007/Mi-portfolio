@@ -18,8 +18,7 @@ console.log(formInputs);
 var regexPass = /DH/;
 var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-// Objeto literalpara verificar si un campo tiene error
-var errorsObj = {};
+
 // Recorremos el array y asignamos la validación básica
 formInputs.forEach(function (oneInput) {
 	// A cada campo le asignamos el evento blur y su funcionalidad
@@ -30,8 +29,7 @@ formInputs.forEach(function (oneInput) {
 			this.classList.add('is-invalid');
 			// Ademas, al <div> con clase 'invalid-feedback' le agremamos el texto de error
 			this.nextElementSibling.innerHTML = 'El campo <b>' + this.getAttribute('data-nombre') + '</b> es obligatorio';
-			// Si un campo tiene error, creamos una key con el nombre del campo y valor true
-			errorsObj[this.name] = true;
+
 		} else {
 			// Cuando el campo NO está vacío
 
@@ -44,8 +42,7 @@ formInputs.forEach(function (oneInput) {
 			// Al mensaje de error le sacamos el texto
 			this.nextElementSibling.innerHTML = '';
 
-			// Si un campo NO tiene error, eliminamos la key del objeto y su valor
-			delete errorsObj[this.name];
+
 
 			// Validamos el tipo de dato del campo title
 			if (this.name === 'name') {
@@ -106,10 +103,7 @@ formInputs.forEach(function (oneInput) {
 			var fileExtension = this.value.split('.').pop();
 			// Array de estensiones permitidas
 			var acceptedExtensions = ['jpg', 'jpeg', 'png'];
-			/*
-				Buscamos la extensión del archivo actual en nuestro array de extensiones permitidas
-				Si no se encuentra la extensión dentro de nuestro array retorna undefined
-			*/
+
 			var extensionIsOk = acceptedExtensions.find(function (ext) {
 				return ext === fileExtension;
 			});
@@ -120,8 +114,7 @@ formInputs.forEach(function (oneInput) {
 				this.classList.add('is-invalid');
 				console.log(this.nextElementSibling);
 				this.nextElementSibling.innerHTML = 'Formato inválido. Los formatos soportados son jpg, jpeg y png';
-				// Si un campo tiene error, creamos una key con el nombre del campo y valor true
-				errorsObj[this.name] = true;
+				
 			} else {
 				this.classList.remove('is-invalid');
 				this.classList.add('is-valid');

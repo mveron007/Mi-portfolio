@@ -27,7 +27,7 @@ inputs.forEach(function (oneInput) {
                 if (!regexEmail.test(this.value.trim())) {
                     this.classList.add('is-invalid');
 
-                    this.nextElementSibling.innerHTML = 'El campo <b>' + this.getAttribute('data-nombre') + '</b> debe tener un @ ';
+                    this.nextElementSibling.innerHTML = 'El campo <b>' + this.getAttribute('data-nombre') + '</b> no posee un formato de e-mail valido ';
                 }
             }
         }

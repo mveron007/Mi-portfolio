@@ -184,13 +184,12 @@ class ProductsController extends Controller
 
         if ($productsD != null) {
             $productsD->delete();
-            // return redirect()->route('dashboard')->with(['message'=> 'Successfully deleted!!']);
+
             return redirect('products/show');
 
         }
 
         return redirect('products/show');
 
-        // return view('products.show', compact('productsD'));
     }
 }

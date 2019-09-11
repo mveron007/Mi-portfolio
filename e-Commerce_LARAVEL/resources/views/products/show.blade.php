@@ -19,7 +19,7 @@
 
       @section('content')
 
-    <a href="/"> <img class="back-acount" src="/images/back.png" width="50px;" alt=""> </a>
+    
 
 
     <div class="edit-product-container">

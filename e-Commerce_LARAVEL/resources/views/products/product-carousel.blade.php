@@ -17,6 +17,7 @@
         box-sizing: border-box;
       }
 
+
       .title-product{
         display: inline-flex;
         position: relative;
@@ -26,11 +27,6 @@
       }
       .title-product h1{
         font-family: 'Acme', sans-serif;
-      }
-      @media (max-width:500px) {
-          .title-product{
-              left: 24%;
-          }
       }
 
       .slider {
@@ -49,6 +45,13 @@
       .slick-prev:before,
       .slick-next:before {
         color: black;
+      }
+
+      @media (max-width:500px) {
+          .title-product{
+              margin-top: 100px;
+              left: 24%;
+          }
       }
 
 

@@ -27,6 +27,8 @@
           @if (Auth::user()->is_admin == true)
           <li><a href="/products/addProduct" class="list-group-item card-link">Agregar Productos</a></li>
           <li><a class="list-group-item card-link" href="/products/show">Editor de Productos</a></li>
+          <li><a class="list-group-item card-link" href="/admin/createAdmin">Agregar un nuevo administrador</a></li>
+
           @else
           <li><a href="/cart" class="list-group-item card-link">Compras</a></li>
           <li><a href="/products/index" class="list-group-item card-link">Home</a></li>
@@ -91,7 +93,7 @@
               </div> -->
             </div>
 
-            
+
         <!-- </div>
     </div>
 </div> -->

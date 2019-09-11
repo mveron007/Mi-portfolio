@@ -11,18 +11,12 @@
 |
 */
 
+// Rutas para el carrito de compras
+Route::get('cart', 'CartController@index') ;
+Route::get('cart/add/{id}', 'CartController@addItem') ;
+// Route::post('/cart', 'CartController@cart');
 
-//Prueba con countries API
-
-// Route::get('countries', function() {
-//     //
-//
-//     $pais = Countries::all();
-//     return $pais;
-// });
-
-Route::get('countries', 'HomeController@countries');
-//Fin de prueba con countries API
+Route::get('cart/remove/{id}', 'CartController@removeItem' );
 
 
 Route::get('checkout', 'CartController@checkout');
@@ -39,26 +33,15 @@ Route::get('subtotal', function() {
 });
 
 
-Route::get('cart', 'CartController@index') ;
-Route::get('cart/add/{id}', 'CartController@addItem') ;
-Route::post('/cart', 'CartController@cart');
-
-Route::get('cart/remove/{id}', 'CartController@removeItem' );
-
-
-
-
-
 Route::get('/',  'ProductsController@index');
 
-//
-// Route::get('movies/', 'MoviesController@store');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+//Rutas de creación de productos
 Route::get('/products/addProduct', 'ProductsController@create');
 Route::post('/products/addProduct', 'ProductsController@store');
 
@@ -66,28 +49,20 @@ Route::get('/products/index', 'ProductsController@index');
 
 Route::get('/products/detail/{id}', 'ProductsController@detail');
 
-
-// Route::get('/products/show', 'ProductsController@show');
-//
-// Route::delete('/products/show/{id}', 'ProductsController@destroy');
-//
-// Route::put('/products/{id}', 'ProductsController@update'); // Ruta para actualizar una película
-//
-// Route::get('/products/edit/{id}', 'ProductsController@edit');
-//
-//
-// Route::get('/products/show', 'ProductsController@search');
-
+// Rutas de buscador
 Route::get('home/searchredirect', function(){
 
     // Si el argumento search está vacío regresar a la página anterior
     if (empty(Input::get('search'))) return redirect()->back();
 
-    $search = urlencode(e(Input::get('search')));
+    $search = urlencode(e(Input::get('search')));  // se codifica una cadena p/ ser usada como la parte de consulta de una URL
     $route = "home/search/$search";
     return redirect($route);
 });
+
 Route::get("home/search/{search}", "ProductsController@buscar");
+// Fin de rutas de buscador
+
 
 //Filtro para usuario administrador
 Route::group(['middleware' => 'admin'], function () {
@@ -101,11 +76,11 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/products/edit/{id}', 'ProductsController@edit');  //Ruta para editar una película
 
 
-    Route::get('/products/show', 'ProductsController@search');
+    Route::get('/products/show', 'ProductsController@search'); //Ruta para mostrar todos los productos
 });
 
 //Fin de filtro administrador
 
 Route::match(['get', 'post'], 'admin/createAdmin', 'AdminController@createAdmin');
 
-Route::get('admin', 'AdminController@admin');
+// Route::get('admin', 'AdminController@admin');

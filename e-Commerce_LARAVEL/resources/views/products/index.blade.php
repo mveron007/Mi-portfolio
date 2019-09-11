@@ -34,14 +34,6 @@
     <script type="text/javascript">
       $(document).on('ready', function() {
 
-        //   $(".center").slick({
-        //   dots: true,
-        //   infinite: true,
-        //   centerMode: true,
-        //   slidesToShow: 1,
-        //   slidesToScroll: 4,
-        //   mobileFirst:true
-        // });
         $(".lazy").slick({
         lazyLoad: 'ondemand', // ondemand progressive anticipated
         infinite: true,
@@ -259,30 +251,12 @@
           </div>
         </div>
 
-          <!-- <div>
-            <div class="rounded-circle" style="background-color:rgb(249, 196, 9); width:100px;">
-              <a href="#"><img class="rounded-circle " src="/images/cama-para-mascotas.png" alt=""></a>
-            </div>
-          </div>
-          <div>
-            <div class="rounded-circle" style="background-color:rgb(41, 38, 43); width:100px;">
-              <a href="#"><img class="rounded-circle " src="/images/perro.png" alt=""></a>
-            </div>
-          </div>
-          <div>
-            <div class="rounded-circle" style="background-color:rgb(19, 129, 219); width:100px;">
-              <a href="#"><img class="rounded-circle " src="/images/secador-de-pelo.png" alt=""></a>
-            </div>
-          </div> -->
+
         </section>
 
       <!-- </div> -->
 
       @include('products.product-carousel')
-
-      <!-- <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 
     <br><br><br>
     <!-- <div class="dropup my-bot" style="position:fixed; left: 75%; bottom:0%; z-index:10;"> -->

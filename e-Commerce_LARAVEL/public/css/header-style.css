@@ -3,7 +3,10 @@ article{
   background-repeat: no-repeat;
 }
 header{
-  background-image: url('../images/dogue.jpg');
+  height:500px; background-repeat:no-repeat; background-size:100vw;
+}
+.logo img {
+    width:120px; margin:20px;
 }
 .phone-p{
   display:inline-flex;
@@ -21,6 +24,14 @@ header{
   margin: 0px 2px 0px 2px;
 }
 @media (max-width: 800px) {
+
+header{
+    height: 400px;
+    margin-bottom: 8px;
+}
+.logo img {
+    width: 88px;
+}
 .phone-p{
   display: none;
 }
